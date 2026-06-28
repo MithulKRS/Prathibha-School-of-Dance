@@ -18,26 +18,20 @@
     theme: {
       extend: {
         colors: {
-          cream: '#FAF6EF',
-          offwhite: '#F3EEE2',
-          ink: '#2A211D',
-          maroon: {
-            DEFAULT: '#800020',
-            dark: '#56000F',
-            light: '#A33655',
-            50: '#FBEEF1'
-          },
-          gold: {
-            DEFAULT: '#C9A227',
-            dark: '#9C7A1B',
-            light: '#E8D9A0'
-          }
+          obsidian: '#07050E',
+          onyx: '#0D0A1E',
+          surface: '#13102A',
+          ivory: '#EDE8D5',
+          muted: '#8A7E65',
+          gold: { DEFAULT: '#C9A84C', bright: '#F0CC66', dim: '#6B5820', glow: 'rgba(201,168,76,0.12)' },
+          teal: { DEFAULT: '#1B7A82', light: '#22A5B0' },
+          saffron: '#C8620A',
         },
         fontFamily: {
           display: ['"Playfair Display"', 'serif'],
           accent: ['"Cormorant Garamond"', 'serif'],
-          body: ['"Inter"', 'sans-serif']
-        }
+          body: ['"Inter"', 'sans-serif'],
+        },
       }
     }
   }
@@ -52,13 +46,15 @@
 
   /* --- Image placeholder pattern --- */
   .ph {
-    background-color: #EFE9DC;
-    background-image: repeating-linear-gradient(135deg, rgba(128,0,32,0.05) 0px, rgba(128,0,32,0.05) 2px, transparent 2px, transparent 16px);
+    background-color: #13102A;
+    background-image: repeating-linear-gradient(135deg, rgba(201,168,76,0.04) 0px, rgba(201,168,76,0.04) 1px, transparent 1px, transparent 14px);
   }
 
   /* --- Scroll reveal --- */
   .reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1); }
   .reveal.in-view { opacity: 1; transform: translateY(0); }
+  @media (prefers-reduced-motion: reduce) { .reveal, .reveal.in-view { opacity: 1 !important; transform: none !important; transition: none !important; } }
+
 
   /* --- Hero load animation --- */
   @keyframes fadeUp { from { opacity: 0; transform: translateY(22px);} to { opacity: 1; transform: translateY(0);} }
@@ -130,7 +126,7 @@
 </style>
 </head>
 
-<body class="bg-cream text-ink antialiased">
+<body class="bg-obsidian text-ivory antialiased">
 
 <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-maroon focus:text-cream focus:px-4 focus:py-2 focus:rounded-md">Skip to main content</a>
 
@@ -196,7 +192,7 @@
 <main id="main">
 
   <!-- ============ REGISTRATION & INQUIRY ============ -->
-  <section id="registration" class="pt-32 sm:pt-40 pb-24 sm:pb-32 bg-cream">
+  <section id="registration" class="pt-32 sm:pt-40 pb-24 sm:pb-32 bg-obsidian relative overflow-hidden">
     <div class="max-w-3xl mx-auto px-5 sm:px-8">
 
       <div class="reveal text-center mb-14">
@@ -277,10 +273,11 @@
               <div class="relative">
                 <label for="location" class="field-label">Location Intend to Join</label>
                 <select id="location" name="location" required class="field-select">
-                  <option value="" disabled selected>Select a location</option>
+                  <option value="" disabled selected>Select a location/Online class</option>
                   <option value="Mangaf">Mangaf</option>
                   <option value="Salmiya">Salmiya</option>
                   <option value="Abbasiya">Abbasiya</option>
+                  <option value="Online">Online</option>
                 </select>
                 <svg class="pointer-events-none absolute right-0 bottom-3 w-4 h-4 text-ink/40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 9l6 6 6-6"/></svg>
               </div>
@@ -369,7 +366,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path d="M12 21s-7-7.5-7-12a7 7 0 1 1 14 0c0 4.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
           </span>
           <p class="text-xs tracking-[0.2em] uppercase text-cream/50 mb-2">Academy Address</p>
-          <p class="text-cream/90 leading-relaxed">Block 4, Street 26,<br>Mangaf, Al-Ahmadi Governorate, Kuwait</p>
+          <p class="text-cream/90 leading-relaxed">Block 4, Street 25,<br>Mangaf, Al-Ahmadi Governorate, Kuwait</p>
           <a href="https://maps.app.goo.gl/6eXpiknGN6Hf24E87" target="_blank" rel="noopener noreferrer" class="inline-block mt-3 text-sm text-gold hover:text-gold-light transition-colors">Get Directions &rarr;</a>
         </div>
 

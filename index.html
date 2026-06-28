@@ -3,134 +3,142 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prathibha School of Dance | Bharatanatyam, Kuchipudi & Mohiniyattam Academy — Kuwait</title>
-<meta name="description" content="Prathibha School of Dance, Kuwait — a premium academy for Bharatanatyam, Kuchipudi, Mohiniyattam and semi-classical dance, led by founder Rajasree Prem. Classical Indian dance training rooted in heritage.">
-<meta name="theme-color" content="#800020">
-<link rel="icon" type="image/jpeg" href="assets\icon.png">
+<title>Prathibha School of Dance | Classical Dance Academy — Kuwait</title>
+<meta name="description" content="Prathibha School of Dance, Kuwait — a premier academy for Bharatanatyam, Kuchipudi, Mohiniyattam and Semi-Classical dance, led by founder Rajasree Prem. Classical Indian dance training rooted in heritage.">
+<meta name="theme-color" content="#C9A84C">
+<link rel="icon" type="image/jpeg" href="assets/icon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = {
     theme: {
       extend: {
         colors: {
-          cream: '#FAF6EF',
-          offwhite: '#F3EEE2',
-          ink: '#2A211D',
-          maroon: {
-            DEFAULT: '#800020',
-            dark: '#56000F',
-            light: '#A33655',
-            50: '#FBEEF1'
-          },
-          gold: {
-            DEFAULT: '#C9A227',
-            dark: '#9C7A1B',
-            light: '#E8D9A0'
-          }
+          obsidian: '#07050E',
+          onyx: '#0D0A1E',
+          surface: '#13102A',
+          ivory: '#EDE8D5',
+          muted: '#8A7E65',
+          gold: { DEFAULT: '#C9A84C', bright: '#F0CC66', dim: '#6B5820', glow: 'rgba(201,168,76,0.12)' },
+          teal: { DEFAULT: '#1B7A82', light: '#22A5B0' },
+          saffron: '#C8620A',
         },
         fontFamily: {
           display: ['"Playfair Display"', 'serif'],
           accent: ['"Cormorant Garamond"', 'serif'],
-          body: ['"Inter"', 'sans-serif']
-        }
+          body: ['"Inter"', 'sans-serif'],
+        },
       }
     }
   }
 </script>
 
 <style>
-  html { scroll-behavior: auto; }
-  @media (prefers-reduced-motion: no-preference) {
-    html { scroll-behavior: smooth; }
-  }
-  body { font-family: 'Inter', sans-serif; background-color: #FAF6EF; color: #2A211D; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { font-family: 'Inter', sans-serif; background-color: #07050E; color: #EDE8D5; overflow-x: hidden; }
 
-  /* --- Image placeholder pattern --- */
+  /* ─── Scrollbar ─── */
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: #07050E; }
+  ::-webkit-scrollbar-thumb { background: #3A2E18; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #C9A84C; }
+
+  /* ─── Temple diamond texture ─── */
+  .temple-bg {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M30 3L57 30L30 57L3 30Z' fill='none' stroke='rgba(201%2C168%2C76%2C0.06)' stroke-width='0.7'/%3E%3Ccircle cx='30' cy='30' r='5' fill='none' stroke='rgba(201%2C168%2C76%2C0.05)' stroke-width='0.6'/%3E%3C/svg%3E");
+    background-size: 60px 60px;
+  }
+
+  /* ─── Image placeholder ─── */
   .ph {
-    background-color: #EFE9DC;
-    background-image: repeating-linear-gradient(135deg, rgba(128,0,32,0.05) 0px, rgba(128,0,32,0.05) 2px, transparent 2px, transparent 16px);
+    background-color: #13102A;
+    background-image: repeating-linear-gradient(135deg, rgba(201,168,76,0.04) 0px, rgba(201,168,76,0.04) 1px, transparent 1px, transparent 14px);
   }
 
-  /* --- Scroll reveal --- */
+  /* ─── Gold card top-border ─── */
+  .gold-card { position: relative; }
+  .gold-card::before { content: ''; position: absolute; inset: 0; border-radius: inherit; border: 1px solid rgba(201,168,76,0.18); pointer-events: none; z-index: 1; }
+  .gold-card::after { content: ''; position: absolute; top: 0; left: 20%; right: 20%; height: 1px; background: linear-gradient(90deg, transparent, #C9A84C, transparent); z-index: 2; }
+
+  /* ─── Scroll reveal ─── */
   .reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1); }
   .reveal.in-view { opacity: 1; transform: translateY(0); }
+  @media (prefers-reduced-motion: reduce) { .reveal, .reveal.in-view { opacity: 1 !important; transform: none !important; transition: none !important; } }
 
-  /* --- Hero load animation --- */
-  @keyframes fadeUp { from { opacity: 0; transform: translateY(22px);} to { opacity: 1; transform: translateY(0);} }
-  .animate-fade-up { animation: fadeUp 1s cubic-bezier(.16,1,.3,1) both; }
+  /* ─── Fade-up animations ─── */
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+  .afu { animation: fadeUp 1.1s cubic-bezier(.16,1,.3,1) both; }
 
-  @media (prefers-reduced-motion: reduce) {
-    .reveal, .reveal.in-view { opacity: 1 !important; transform: none !important; transition: none !important; }
-    .animate-fade-up { animation: none !important; opacity: 1 !important; transform: none !important; }
-  }
+  /* ─── Hero mandala pulse ─── */
+  @keyframes slowSpin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  .mandala-spin { animation: slowSpin 60s linear infinite; transform-origin: center; }
+  @media (prefers-reduced-motion: reduce) { .mandala-spin { animation: none; } }
 
-  /* --- Drop cap for founder bio --- */
-  .drop-cap::first-letter {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-size: 4.2rem;
-    line-height: 0.78;
-    float: left;
-    padding-right: 0.6rem;
-    padding-top: 0.4rem;
-    color: #800020;
-  }
+  /* ─── Drop cap ─── */
+  .drop-cap::first-letter { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 4rem; line-height: 0.78; float: left; padding-right: 0.65rem; padding-top: 0.4rem; color: #C9A84C; }
 
-  /* Focus visibility */
-  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
-    outline: 2px solid #C9A227;
-    outline-offset: 3px;
-  }
+  /* ─── Gold text glow on headings ─── */
+  .gold-glow { text-shadow: 0 0 60px rgba(201,168,76,0.35); }
 
-  ::selection { background: #C9A227; color: #2A211D; }
+  /* ─── Focus ─── */
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 2px solid #C9A84C; outline-offset: 3px; }
+  ::selection { background: #C9A84C; color: #07050E; }
+
+  /* ─── Review card hover ─── */
+  .review-card { transition: border-color .3s, transform .3s; }
+  .review-card:hover { border-color: rgba(201,168,76,0.4); transform: translateY(-4px); }
+
+  /* ─── Gallery item ─── */
+  .gal-fig img, .gal-fig .ph { transition: transform .7s cubic-bezier(.16,1,.3,1); }
+  .gal-fig:hover img, .gal-fig:hover .ph { transform: scale(1.06); }
+  .gal-cap { opacity: 0; transition: opacity .3s; }
+  .gal-fig:hover .gal-cap { opacity: 1; }
+
+  /* ─── Nav transition ─── */
+  #site-nav { transition: background .3s, box-shadow .3s, border-color .3s; }
 </style>
 </head>
 
-<body class="bg-cream text-ink antialiased">
+<body class="bg-obsidian text-ivory antialiased">
 
-<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-maroon focus:text-cream focus:px-4 focus:py-2 focus:rounded-md">Skip to main content</a>
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-gold focus:text-obsidian focus:px-4 focus:py-2 focus:rounded-md">Skip to main content</a>
 
-<!-- ============ NAVIGATION ============ -->
-<header id="site-nav" class="fixed top-0 inset-x-0 z-50 bg-cream/80 backdrop-blur-md border-b border-maroon/10 transition-all duration-300">
+<!-- ═══════════════ NAVIGATION ═══════════════ -->
+<header id="site-nav" class="fixed top-0 inset-x-0 z-50 border-b border-transparent">
   <nav class="max-w-7xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between" aria-label="Primary">
 
-    <!-- Logo placeholder -->
     <a href="#hero" class="flex items-center gap-3 group">
-      <!-- Replace this div with: <img src="logo.png" alt="Prathibha School of Dance logo" class="w-11 h-11 rounded-full object-cover"> -->
-      <img src="assets\logo.jpeg" alt="Prathibha School of Dance logo" class="w-11 h-11 rounded-full object-cover">
+      <img src="assets/logo.jpeg" alt="Prathibha School of Dance logo" class="w-11 h-11 rounded-full object-cover ring-1 ring-gold/30 group-hover:ring-gold/60 transition-all">
       <span class="leading-tight">
-        <span class="block font-display text-lg sm:text-xl text-maroon font-semibold tracking-wide">Prathibha</span>
-        <span class="block text-[9px] sm:text-[10px] tracking-[0.25em] text-maroon/60 uppercase">School of Dance</span>
+        <span class="block font-display text-lg sm:text-xl text-gold font-semibold tracking-wide">Prathibha</span>
+        <span class="block text-[9px] sm:text-[10px] tracking-[0.28em] text-gold/50 uppercase">School of Dance</span>
       </span>
     </a>
 
-    <!-- Desktop links -->
-    <ul class="hidden md:flex items-center gap-10 font-body text-sm tracking-wide text-ink/80">
-      <li><a href="#about" class="hover:text-maroon transition-colors">About</a></li>
-      <li><a href="#founder" class="hover:text-maroon transition-colors">Founder</a></li>
-      <li><a href="#gallery" class="hover:text-maroon transition-colors">Gallery</a></li>
-      <li><a href="#contact" class="hover:text-maroon transition-colors">Contact</a></li>
+    <ul class="hidden md:flex items-center gap-9 font-body text-sm tracking-wide text-ivory/70">
+      <li><a href="#about" class="hover:text-gold transition-colors">About</a></li>
+      <li><a href="#founder" class="hover:text-gold transition-colors">Founder</a></li>
+      <li><a href="#gallery" class="hover:text-gold transition-colors">Gallery</a></li>
+      <li><a href="#reviews" class="hover:text-gold transition-colors">Reviews</a></li>
+      <li><a href="#contact" class="hover:text-gold transition-colors">Contact</a></li>
     </ul>
 
-    <div class="hidden md:block">
-      <a href="register.html" class="inline-flex items-center gap-2 bg-maroon text-cream text-sm font-medium tracking-wide px-6 py-2.5 rounded-full hover:bg-maroon-dark transition-colors">
-        Register Now
-      </a>
-    </div>
+    <a href="register.html" class="hidden md:inline-flex items-center gap-2 border border-gold/60 text-gold text-sm font-medium tracking-widest px-6 py-2.5 rounded-full hover:bg-gold hover:text-obsidian transition-all duration-300">
+      Register Now
+    </a>
 
-    <!-- Mobile menu button -->
-    <button id="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" class="md:hidden text-maroon p-2 -mr-2">
+    <button id="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" class="md:hidden text-gold p-2 -mr-2">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" class="w-7 h-7"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
     </button>
-  </nav>
+  </nav> 
 
-  <!-- Mobile menu overlay -->
-  <div id="mobile-menu" class="hidden md:hidden fixed inset-0 top-20 bg-[#FAF6EF] z-[60] h-[calc(100vh-5rem)] overflow-y-auto">
+  
+    <!-- Mobile menu overlay -->
+  <div id="mobile-menu" class="hidden md:hidden fixed inset-0 top-20 bg-[#07050E] z-[60] h-[calc(100vh-5rem)] overflow-y-auto">
     <div class="flex flex-col min-h-full px-8 pt-8 pb-12">
       <!-- Menu Links -->
       <ul class="flex flex-col gap-8 font-display text-4xl text-maroon mt-4">
@@ -142,391 +150,704 @@
       
       <!-- Register Button -->
       <div class="mt-auto pt-10">
-        <a href="#registration" class="flex justify-center items-center w-full bg-maroon text-cream text-lg font-medium tracking-wide py-4 rounded-full shadow-lg hover:bg-maroon-dark transition-colors">
+        <a href="register.html" class="mt-auto inline-flex justify-center items-center border border-gold/60 text-gold text-base font-medium tracking-widest px-6 py-4 rounded-full hover:bg-gold hover:text-obsidian transition-all">
           Register Now
         </a>
       </div>
     </div>
 
     <!-- Close Button -->
-    <button id="menu-close-btn" type="button" aria-label="Close menu" class="absolute top-6 right-6 text-maroon p-2 bg-[#FAF6EF] rounded-full border border-maroon/10 shadow-sm">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="w-8 h-8"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    <button id="menu-close-btn" type="button" aria-label="Close menu" class="absolute top-6 right-6 text-gold p-2">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" class="w-7 h-7"><path d="M6 6l12 12M18 6L6 18"/></svg>
     </button>
   </div>
 </header>
 
 <main id="main">
 
-  <!-- ============ HERO ============ -->
-  <section id="hero" class="relative h-screen min-h-[640px] w-full overflow-hidden">
-    <img src="assets\hero.jpeg" alt="Dancers of Prathibha School of Dance performing on stage" class="absolute inset-0 w-full h-full object-cover">
-    <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-black/45"></div>
+<!-- ═══════════════ HERO ═══════════════ -->
+<section id="hero" class="relative h-screen min-h-[660px] w-full overflow-hidden">
+  <!--
+    ╔══════════════════════════════════════════════════════════════════╗
+    ║  HERO IMAGES — HOW TO SWAP IN YOUR PHOTOS                      ║
+    ║                                                                  ║
+    ║  DESKTOP IMAGE (shown on screens 768px and wider)               ║
+    ║  → Landscape/wide orientation recommended (min 1920×1080)       ║
+    ║  → Change  assets/hero.jpeg  to your desktop photo filename     ║
+    ║                                                                  ║
+    ║  MOBILE IMAGE (shown on screens narrower than 768px)            ║
+    ║  → Portrait orientation recommended (min 600×900)               ║
+    ║  → Change  assets/hero-mobile.jpeg  to your mobile photo name   ║
+    ║  → If you only have one photo, set both src values the same     ║
+    ╚══════════════════════════════════════════════════════════════════╝
+  -->
+  <picture>
+    <!-- ▼ MOBILE HERO — change src to your portrait/mobile photo ▼ -->
+    <source
+      media="(max-width: 767px)"
+      srcset="assets/hero-mobile.jpeg">
+    <!-- ▼ DESKTOP HERO — change src to your landscape/desktop photo ▼ -->
+    <img
+      src="assets/hero-new.jpeg"
+      alt="Dancers of Prathibha School of Dance performing on stage"
+      class="absolute inset-0 w-full h-full object-cover object-center scale-[1.02]">
+  </picture>
+  <!-- Multi-layer dark overlay -->
+  <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/50 to-obsidian/30"></div>
+  <div class="absolute inset-0 bg-gradient-to-r from-obsidian/60 via-transparent to-obsidian/40"></div>
 
-    <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
-      <svg class="w-8 h-8 text-gold mb-6 animate-fade-up" style="animation-delay:.05s" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1">
-        <path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z"/>
-        <path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(72 16 16)"/>
-        <path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(144 16 16)"/>
-        <path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(216 16 16)"/>
-        <path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(288 16 16)"/>
-        <circle cx="16" cy="16" r="1.8"/>
-      </svg>
-
-      <p class="animate-fade-up text-gold-light text-xs sm:text-sm tracking-[0.35em] uppercase mb-5" style="animation-delay:.15s">
-        Prathibha School of Dance &middot; Kuwait
-      </p>
-      <h1 class="animate-fade-up font-display text-4xl sm:text-6xl lg:text-7xl text-cream leading-[1.1] max-w-4xl" style="animation-delay:.25s">
-        Where Tradition Finds Its Rhythm
-      </h1>
-      <p class="animate-fade-up font-accent italic text-cream/85 text-lg sm:text-2xl mt-6 max-w-xl" style="animation-delay:.4s">
-        Bharatanatyam, Kuchipudi &amp; Mohiniyattam — classical dance training rooted in heritage, in the heart of Kuwait.
-      </p>
-
-      <div class="animate-fade-up flex flex-col sm:flex-row gap-4 mt-10" style="animation-delay:.55s">
-        <a href="#contact" class="inline-flex items-center justify-center gap-2 bg-gold text-maroon-dark font-semibold tracking-wide px-8 py-3.5 rounded-full hover:bg-gold-light transition-colors">
-          Enquire Now
-        </a>
-        <a href="#gallery" class="inline-flex items-center justify-center gap-2 border border-cream/50 text-cream font-medium tracking-wide px-8 py-3.5 rounded-full hover:bg-white/10 transition-colors">
-          Explore Gallery
-        </a>
-      </div>
-    </div>
-
-    <a href="#about" aria-label="Scroll to About section" class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-cream/70 hover:text-cream transition-colors">
-      <span class="text-[10px] tracking-[0.3em] uppercase">Scroll</span>
-      <span class="w-px h-8 bg-cream/50"></span>
-    </a>
-  </section>
-
-  <!-- ============ ABOUT THE SCHOOL ============ -->
-  <section id="about" class="bg-cream py-24 sm:py-32">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
-
-      <!-- Text -->
-      <div class="reveal">
-        <p class="text-maroon text-xs sm:text-sm tracking-[0.3em] uppercase font-medium mb-4">Our Philosophy</p>
-        <h2 class="font-display text-3xl sm:text-5xl text-ink leading-tight mb-6">An Academy Devoted to&nbsp;Classical Artistry</h2>
-        <p class="text-ink/75 leading-relaxed mb-5">
-          Prathibha School of Dance was founded on a simple belief: that classical Indian dance is a living tradition, not a museum piece. Every class is built around discipline, devotion, and joy — helping students of all ages discover the grace, geometry, and storytelling of dance from the very first step.
-        </p>
-        <p class="text-ink/75 leading-relaxed mb-10">
-          We follow the guru-shishya parampara, the time-honoured teacher-student tradition, paired with structured, age-appropriate curricula. The result is technical precision, expressive confidence, and a genuine connection to Indian cultural heritage — nurtured right here in Kuwait.
-        </p>
-
-        <div class="grid sm:grid-cols-2 gap-4">
-          <div class="border border-maroon/15 rounded-md p-5 bg-white/40">
-            <p class="font-display text-xl text-maroon mb-1">Bharatanatyam</p>
-            <p class="text-sm text-ink/65 leading-relaxed">A devotional temple art form from Tamil Nadu, expressed through precise mudras, rhythmic footwork, and storytelling.</p>
-          </div>
-          <div class="border border-maroon/15 rounded-md p-5 bg-white/40">
-            <p class="font-display text-xl text-maroon mb-1">Kuchipudi</p>
-            <p class="text-sm text-ink/65 leading-relaxed">A lyrical dance-drama tradition from Andhra Pradesh, marked by fluid movement, swift footwork, and dramatic narration.</p>
-          </div>
-          <div class="border border-maroon/15 rounded-md p-5 bg-white/40">
-            <p class="font-display text-xl text-maroon mb-1">Mohiniyattam</p>
-            <p class="text-sm text-ink/65 leading-relaxed">Kerala's "dance of the enchantress" — gentle, swaying movements with graceful, lyrical expression.</p>
-          </div>
-          <div class="border border-maroon/15 rounded-md p-5 bg-white/40">
-            <p class="font-display text-xl text-maroon mb-1">Semi-Classical</p>
-            <p class="text-sm text-ink/65 leading-relaxed">Expressive choreography that blends classical foundations with contemporary musicality and styling.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Image -->
-      <div class="reveal relative">
-        <div class="relative aspect-[4/5] rounded-md overflow-hidden shadow-xl">
-          <img src="assets\dance1.jpg" alt="Students practicing Bharatanatyam at Prathibha School of Dance" class="absolute inset-0 w-full h-full object-cover">
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Divider -->
-  <div class="flex items-center justify-center gap-4 py-2" aria-hidden="true">
-    <span class="h-px w-12 bg-gold/40"></span>
-    <svg class="w-5 h-5 text-gold/70" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1">
-      <path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z"/>
-      <path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(72 16 16)"/>
-      <path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(144 16 16)"/>
-      <path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(216 16 16)"/>
-      <path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(288 16 16)"/>
-      <circle cx="16" cy="16" r="1.8"/>
+  <!-- Mandala watermark -->
+  <div class="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden="true">
+    <svg class="mandala-spin opacity-[0.07] w-[520px] h-[520px] sm:w-[720px] sm:h-[720px]" viewBox="0 0 300 300" fill="none" stroke="#C9A84C" stroke-width="0.6">
+      <circle cx="150" cy="150" r="140"/><circle cx="150" cy="150" r="120"/><circle cx="150" cy="150" r="100"/>
+      <circle cx="150" cy="150" r="80"/><circle cx="150" cy="150" r="60"/><circle cx="150" cy="150" r="40"/>
+      <line x1="10" y1="150" x2="290" y2="150"/><line x1="150" y1="10" x2="150" y2="290"/>
+      <line x1="50" y1="50" x2="250" y2="250"/><line x1="250" y1="50" x2="50" y2="250"/>
+      <path d="M150 10 L160 70 L150 80 L140 70 Z"/>
+      <path d="M150 10 L160 70 L150 80 L140 70 Z" transform="rotate(45 150 150)"/>
+      <path d="M150 10 L160 70 L150 80 L140 70 Z" transform="rotate(90 150 150)"/>
+      <path d="M150 10 L160 70 L150 80 L140 70 Z" transform="rotate(135 150 150)"/>
+      <path d="M150 10 L160 70 L150 80 L140 70 Z" transform="rotate(180 150 150)"/>
+      <path d="M150 10 L160 70 L150 80 L140 70 Z" transform="rotate(225 150 150)"/>
+      <path d="M150 10 L160 70 L150 80 L140 70 Z" transform="rotate(270 150 150)"/>
+      <path d="M150 10 L160 70 L150 80 L140 70 Z" transform="rotate(315 150 150)"/>
+      <!-- Inner lotus petals -->
+      <ellipse cx="150" cy="120" rx="8" ry="18" transform="rotate(0 150 150)"/>
+      <ellipse cx="150" cy="120" rx="8" ry="18" transform="rotate(45 150 150)"/>
+      <ellipse cx="150" cy="120" rx="8" ry="18" transform="rotate(90 150 150)"/>
+      <ellipse cx="150" cy="120" rx="8" ry="18" transform="rotate(135 150 150)"/>
+      <ellipse cx="150" cy="120" rx="8" ry="18" transform="rotate(180 150 150)"/>
+      <ellipse cx="150" cy="120" rx="8" ry="18" transform="rotate(225 150 150)"/>
+      <ellipse cx="150" cy="120" rx="8" ry="18" transform="rotate(270 150 150)"/>
+      <ellipse cx="150" cy="120" rx="8" ry="18" transform="rotate(315 150 150)"/>
     </svg>
-    <span class="h-px w-12 bg-gold/40"></span>
   </div>
 
-  <!-- ============ MEET THE FOUNDER ============ -->
-  <section id="founder" class="bg-offwhite py-24 sm:py-32 relative overflow-hidden">
-
-    <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-5 gap-16 items-start relative">
-
-      <!-- Portrait -->
-      <div class="reveal lg:col-span-2 relative">
-        <div class="relative aspect-[3/4] rounded-md overflow-hidden shadow-xl">
-          <img src="assets\founder.jpg" alt="Portrait of Rajasree Prem, Founder and Artistic Director of Prathibha School of Dance" class="absolute inset-0 w-full h-full object-cover">
-        </div>
-        <p class="mt-6 font-display text-lg text-maroon">Rajasree Prem</p>
-        <p class="text-xs tracking-[0.2em] uppercase text-ink/50">Founder &amp; Artistic Director</p>
-      </div>
-
-      <!-- Bio -->
-      <div class="reveal lg:col-span-3">
-        <p class="text-maroon text-xs sm:text-sm tracking-[0.3em] uppercase font-medium mb-4">Meet the Founder</p>
-        <p class="font-accent italic text-2xl sm:text-3xl text-maroon leading-snug mb-8">
-          For Rajasree Prem, dance is not merely movement — it is prayer, memory, and emotion expressed through the body.
-        </p>
-
-        <p class="drop-cap text-ink/75 leading-relaxed mb-5">
-          Founder of Prathibha School of Dance, Rajasree Prem has devoted her life to the study, practice, and teaching of Indian classical dance. Grounded in the disciplines of Bharatanatyam, Kuchipudi, and Mohiniyattam — alongside expressive semi-classical choreography — her teaching blends the rigour of the guru-shishya parampara with a warm, contemporary approach that makes classical dance accessible to every student who walks through her door.
-        </p>
-        <p class="text-ink/75 leading-relaxed mb-10">
-          Over the years, her academy has grown into a cultural cornerstone for the Indian community in Kuwait — a place where heritage is kept alive through regular recitals, Arangetrams, and cultural showcases. Her vision remains simple: to pass on this art form, with all its discipline and beauty, to the next generation.
-        </p>
-
-        <ul class="space-y-4">
-          <li class="flex items-start gap-3">
-            <svg class="w-4 h-4 mt-1 text-gold shrink-0" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z"/><path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(72 16 16)"/><path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(144 16 16)"/><path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(216 16 16)"/><path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(288 16 16)"/><circle cx="16" cy="16" r="1.8"/></svg>
-            <span class="text-ink/75 text-sm sm:text-base">Decades of devoted training and practice in classical Indian dance</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <svg class="w-4 h-4 mt-1 text-gold shrink-0" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z"/><path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(72 16 16)"/><path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(144 16 16)"/><path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(216 16 16)"/><path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(288 16 16)"/><circle cx="16" cy="16" r="1.8"/></svg>
-            <span class="text-ink/75 text-sm sm:text-base">Mentor to generations of dancers across Kuwait</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <svg class="w-4 h-4 mt-1 text-gold shrink-0" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z"/><path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(72 16 16)"/><path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(144 16 16)"/><path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(216 16 16)"/><path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(288 16 16)"/><circle cx="16" cy="16" r="1.8"/></svg>
-            <span class="text-ink/75 text-sm sm:text-base">Choreographer and director of cultural productions and Arangetrams</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <svg class="w-4 h-4 mt-1 text-gold shrink-0" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z"/><path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(72 16 16)"/><path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(144 16 16)"/><path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(216 16 16)"/><path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(288 16 16)"/><circle cx="16" cy="16" r="1.8"/></svg>
-            <span class="text-ink/75 text-sm sm:text-base">Committed to preserving the guru-shishya tradition of teaching</span>
-          </li>
-        </ul>
-
-        <p class="font-accent italic text-xl text-maroon mt-10">— Rajasree Prem</p>
-      </div>
-
+  <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
+    <!-- Gold divider ornament -->
+    <div class="afu flex items-center gap-3 mb-7" style="animation-delay:.05s" aria-hidden="true">
+      <span class="h-px w-10 bg-gold/60"></span>
+      <svg class="w-5 h-5 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+        <path d="M12 2c1.5 4 1.5 8 0 12-1.5-4-1.5-8 0-12z" transform="rotate(0 12 12)"/>
+        <path d="M12 2c1.5 4 1.5 8 0 12-1.5-4-1.5-8 0-12z" transform="rotate(90 12 12)"/>
+        <path d="M12 2c1.5 4 1.5 8 0 12-1.5-4-1.5-8 0-12z" transform="rotate(45 12 12)"/>
+        <path d="M12 2c1.5 4 1.5 8 0 12-1.5-4-1.5-8 0-12z" transform="rotate(135 12 12)"/>
+        <circle cx="12" cy="12" r="1.5" fill="currentColor"/>
+      </svg>
+      <span class="h-px w-10 bg-gold/60"></span>
     </div>
-  </section>
 
-  <!-- ============ GALLERY ============ -->
-  <section id="gallery" class="bg-cream py-24 sm:py-32">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8">
-      <div class="reveal text-center max-w-2xl mx-auto mb-14">
-        <p class="text-maroon text-xs sm:text-sm tracking-[0.3em] uppercase font-medium mb-4">Gallery</p>
-        <h2 class="font-display text-3xl sm:text-5xl text-ink leading-tight mb-5">Moments in Motion</h2>
-        <p class="text-ink/65 leading-relaxed">A glimpse of performances, practice sessions, mudras, and the milestones our students celebrate along the way.</p>
+    <p class="afu text-gold text-xs sm:text-sm tracking-[0.4em] uppercase font-medium mb-5" style="animation-delay:.15s">
+      Prathibha School of Dance &middot; Kuwait
+    </p>
+    <h1 class="afu font-display text-4xl sm:text-6xl lg:text-[5.5rem] text-ivory leading-[1.05] max-w-4xl gold-glow" style="animation-delay:.28s">
+      Where Tradition<br><em>Finds Its Rhythm</em>
+    </h1>
+    <p class="afu font-accent italic text-ivory/75 text-xl sm:text-2xl mt-7 max-w-lg" style="animation-delay:.42s">
+      Bharatanatyam · Kuchipudi · Mohiniyattam · Semi-Classical
+    </p>
+    <p class="afu text-gold/70 text-sm tracking-[0.25em] uppercase mt-3" style="animation-delay:.5s">
+      Mangaf &nbsp;|&nbsp; Salmiya &nbsp;|&nbsp; Abbasiya
+    </p>
+
+    <div class="afu flex flex-col sm:flex-row gap-4 mt-10" style="animation-delay:.6s">
+      <a href="#contact" class="inline-flex items-center justify-center gap-2 bg-gold text-obsidian font-semibold tracking-wide px-9 py-3.5 rounded-full hover:bg-gold-bright transition-colors">
+        Enquire Now
+      </a>
+      <a href="register.html" class="inline-flex items-center justify-center gap-2 border border-ivory/30 text-ivory font-medium tracking-wide px-9 py-3.5 rounded-full hover:border-gold hover:text-gold transition-all">
+        Register Now
+      </a>
+    </div>
+  </div>
+
+  <a href="#about" aria-label="Scroll to About" class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-gold/60 hover:text-gold transition-colors">
+    <span class="text-[9px] tracking-[0.35em] uppercase">Scroll</span>
+    <span class="w-px h-8 bg-gradient-to-b from-gold/60 to-transparent"></span>
+  </a>
+</section>
+
+<!-- ═══════════════ ABOUT ═══════════════ -->
+<section id="about" class="bg-onyx temple-bg py-24 sm:py-32">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+
+    <div class="reveal">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="h-px w-8 bg-gold/60"></span>
+        <p class="text-gold text-xs tracking-[0.35em] uppercase font-medium">Our Philosophy</p>
       </div>
+      <h2 class="font-display text-3xl sm:text-[2.8rem] text-ivory leading-tight mb-7">
+        An Academy Devoted to<br><em>Classical Artistry</em>
+      </h2>
+      <p class="text-ivory/65 leading-relaxed mb-5">
+        Prathibha School of Dance was founded on a simple belief: that classical Indian dance is a living tradition, not a museum piece. Every class is built around discipline, devotion, and joy — helping students of all ages discover the grace, geometry, and storytelling of dance from the very first step.
+      </p>
+      <p class="text-ivory/65 leading-relaxed mb-10">
+        We follow the guru-shishya parampara, the time-honoured teacher-student tradition, paired with structured, age-appropriate curricula. The result is technical precision, expressive confidence, and a genuine connection to Indian cultural heritage — nurtured right here in Kuwait.
+      </p>
 
-      <div class="reveal grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 auto-rows-[160px] sm:auto-rows-[180px] md:auto-rows-[200px]">
-
-        <!-- 1: feature -->
-        <figure class="group relative col-span-2 row-span-2 rounded-2xl overflow-hidden">
-          <img src="assets\onstage.jpg" alt="Lead performer of Prathibha School of Dance on stage" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-          <figcaption class="absolute inset-0 bg-gradient-to-t from-maroon-dark/85 via-maroon-dark/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
-            <span class="font-display text-cream text-lg">On Stage</span>
-          </figcaption>
-        </figure>
-
-        <!-- 2 -->
-        <figure class="group relative rounded-2xl overflow-hidden">
-          <img src="assets\kuchpudi2.jpg" alt="Close-up of an Alapadma hand mudra" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-          <figcaption class="absolute inset-0 bg-gradient-to-t from-maroon-dark/85 via-maroon-dark/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-            <span class="font-display text-cream text-base">Kuchipudi in Motion</span>
-          </figcaption>
-        </figure>
-
-        <!-- 3 -->
-        <figure class="group relative row-span-2 rounded-2xl overflow-hidden">
-          <img src="assets\alapadma.jpg" alt="Close-up of an Alapadma hand mudra" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-          <figcaption class="absolute inset-0 bg-gradient-to-t from-maroon-dark/85 via-maroon-dark/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-            <span class="font-display text-cream text-base">Alapadma Mudra</span>
-          </figcaption>
-        </figure>
-
-        <!-- 4 -->
-        <figure class="group relative rounded-2xl overflow-hidden">
-          <img src="assets\practice.jpg" alt="Student practicing at the studio" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-          <figcaption class="absolute inset-0 bg-gradient-to-t from-maroon-dark/85 via-maroon-dark/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-            <span class="font-display text-cream text-base">In Practice</span>
-          </figcaption>
-        </figure>
-
-        <!-- 5 -->
-        <figure class="group relative col-span-2 rounded-2xl overflow-hidden">
-          <img src="assets\group_recital.jpg" alt="Group recital of students" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-          <figcaption class="absolute inset-0 bg-gradient-to-t from-maroon-dark/85 via-maroon-dark/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
-            <span class="font-display text-cream text-lg">Group Recital</span>
-          </figcaption>
-        </figure>
-
-        <!-- 6 -->
-        <figure class="group relative rounded-2xl overflow-hidden">
-          <img src="assets\mentor.jpg" alt="Traditional dance costume detail" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-          <figcaption class="absolute inset-0 bg-gradient-to-t from-maroon-dark/85 via-maroon-dark/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-            <span class="font-display text-cream text-base">Mentor-Rajasree Prem</span>
-          </figcaption>
-        </figure>
-
-        <!-- 7 -->
-        <figure class="group relative rounded-2xl overflow-hidden">
-          <img src="assets\arangettam.jpg" alt="Arangetram debut performance ceremony" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-          <figcaption class="absolute inset-0 bg-gradient-to-t from-maroon-dark/85 via-maroon-dark/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-            <span class="font-display text-cream text-base">Arangetram</span>
-          </figcaption>
-        </figure>
-
+      <div class="grid sm:grid-cols-2 gap-3">
+        <div class="gold-card rounded-lg p-5 bg-surface">
+          <p class="font-display text-lg text-gold mb-2">Bharatanatyam</p>
+          <p class="text-sm text-ivory/55 leading-relaxed">A devotional temple art from Tamil Nadu, expressed through precise mudras, rhythmic footwork, and storytelling.</p>
+        </div>
+        <div class="gold-card rounded-lg p-5 bg-surface">
+          <p class="font-display text-lg text-gold mb-2">Kuchipudi</p>
+          <p class="text-sm text-ivory/55 leading-relaxed">A lyrical dance-drama from Andhra Pradesh, marked by fluid movement, swift footwork, and dramatic narration.</p>
+        </div>
+        <div class="gold-card rounded-lg p-5 bg-surface">
+          <p class="font-display text-lg text-gold mb-2">Mohiniyattam</p>
+          <p class="text-sm text-ivory/55 leading-relaxed">Kerala's "dance of the enchantress" — gentle, swaying grace with lyrical, expressive storytelling.</p>
+        </div>
+        <div class="gold-card rounded-lg p-5 bg-surface">
+          <p class="font-display text-lg text-gold mb-2">Semi-Classical</p>
+          <p class="text-sm text-ivory/55 leading-relaxed">Expressive choreography blending classical foundations with contemporary musicality and styling.</p>
+        </div>
       </div>
     </div>
-  </section>
 
-  <!-- ============ CONTACT / FOOTER ============ -->
-  <footer id="contact" class="bg-maroon-dark text-cream pt-24 sm:pt-32 pb-10 relative overflow-hidden">
-
-    <svg class="absolute -top-10 -right-10 w-72 h-72 text-gold opacity-[0.06] pointer-events-none" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="0.6">
-      <path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z"/>
-      <path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(72 16 16)"/>
-      <path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(144 16 16)"/>
-      <path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(216 16 16)"/>
-      <path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(288 16 16)"/>
-      <circle cx="16" cy="16" r="1.8"/>
-    </svg>
-
-    <div class="max-w-7xl mx-auto px-5 sm:px-8 relative">
-      <div class="reveal text-center max-w-2xl mx-auto mb-16">
-        <p class="text-gold text-xs sm:text-sm tracking-[0.3em] uppercase font-medium mb-4">Get in Touch</p>
-        <h2 class="font-display text-3xl sm:text-5xl text-cream leading-tight">Visit, Call, or Write to Us</h2>
-      </div>
-
-      <div class="reveal max-w-4xl mx-auto">
-
-        <div class="grid sm:grid-cols-3 gap-10 mb-14 text-center">
-
-          <div class="flex flex-col items-center">
-            <span class="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center mb-4 text-gold">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path d="M12 21s-7-7.5-7-12a7 7 0 1 1 14 0c0 4.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
-            </span>
-            <p class="text-xs tracking-[0.2em] uppercase text-cream/50 mb-2">Academy Address</p>
-            <p class="text-cream/90 leading-relaxed">Block 4, Street 26,<br>Mangaf, Al-Ahmadi Governorate, Kuwait</p>
-            <a href="https://maps.app.goo.gl/6eXpiknGN6Hf24E87" target="_blank" rel="noopener noreferrer" class="inline-block mt-3 text-sm text-gold hover:text-gold-light transition-colors">Get Directions &rarr;</a>
-          </div>
-
-          <div class="flex flex-col items-center">
-            <span class="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center mb-4 text-gold">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path d="M4 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L14 13l5 2v4a2 2 0 0 1-2 2C9.5 21 3 14.5 3 6a2 2 0 0 1 2-2z"/></svg>
-            </span>
-            <p class="text-xs tracking-[0.2em] uppercase text-cream/50 mb-2">Call Us</p>
-            <a href="tel:+96567648787" class="text-cream/90 hover:text-gold transition-colors">+965 6764 8787</a>
-          </div>
-
-          <div class="flex flex-col items-center">
-            <span class="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center mb-4 text-gold">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-            </span>
-            <p class="text-xs tracking-[0.2em] uppercase text-cream/50 mb-2">Email Us</p>
-            <a href="mailto:psdkuwait@gmail.com" class="text-cream/90 hover:text-gold transition-colors break-all">psdkuwait@gmail.com</a>
-          </div>
-
-        </div>
-
-        <!-- Social -->
-        <div class="flex items-center justify-center gap-3 mb-14">
-          <a href="https://www.instagram.com/prathibhaschoolofdance/" target="_blank" rel="noopener noreferrer" aria-label="Prathibha School of Dance on Instagram" class="w-11 h-11 rounded-full border border-gold/40 flex items-center justify-center text-gold hover:bg-gold hover:text-maroon-dark transition-colors">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.9" fill="currentColor" stroke="none"/></svg>
-          </a>
-          <a href="https://www.facebook.com/prathibhaschoolofdance/" target="_blank" rel="noopener noreferrer" aria-label="Prathibha School of Dance on Facebook" class="w-11 h-11 rounded-full border border-gold/40 flex items-center justify-center text-gold hover:bg-gold hover:text-maroon-dark transition-colors">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path d="M14 9.2h2.3V6.3H14c-1.7 0-3 1.4-3 3.1v1.8H9v3h2v6.3h3v-6.3h2.2l.5-3H14V9.2z"/></svg>
-          </a>
-          <a href="https://www.youtube.com/@psdkuwait" target="_blank" rel="noopener noreferrer" aria-label="Prathibha School of Dance on YouTube" class="w-11 h-11 rounded-full border border-gold/40 flex items-center justify-center text-gold hover:bg-gold hover:text-maroon-dark transition-colors">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M11 9.7l4 2.3-4 2.3z" fill="currentColor" stroke="none"/></svg>
-          </a>
-        </div>
-
-        <!-- Map -->
-        <div>
-          <p class="text-xs tracking-[0.2em] uppercase text-cream/50 mb-3 text-center">Find Us</p>
-          <div class="aspect-video rounded-md overflow-hidden border border-gold/25">
-            <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13944.394793521276!2d48.116049428047766!3d29.102767386128953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf063c7b169555%3A0x3574f3cb6952b806!2sPrathibha%20School%20Of%20Dance!5e0!3m2!1sen!2skw!4v1781989108140!5m2!1sen!2skw"
-            class="w-full h-full border-0"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Map showing the approximate location of Prathibha School of Dance, Kuwait">
-          </iframe>
-          </div>
-          <p class="text-center mt-3">
-            <a href="https://maps.app.goo.gl/6eXpiknGN6Hf24E87" target="_blank" rel="noopener noreferrer" class="text-sm text-gold hover:text-gold-light transition-colors">Open in Google Maps &rarr;</a>
-          </p>
-        </div>
-
-      </div>
-
-      <!-- Bottom bar -->
-      <div class="mt-20 pt-7 border-t border-cream/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-cream/45">
-        <p>&copy; <span id="year"></span> Prathibha School of Dance, Kuwait. All rights reserved.</p>
-        <p class="font-accent italic text-cream/40">Crafted with reverence for tradition.</p>
+    <div class="reveal relative">
+      
+      <div class="relative aspect-[4/5] rounded-md overflow-hidden">
+        <img src="assets/solo-dance2.jpg" alt="Students practicing Bharatanatyam at Prathibha School of Dance" class="absolute inset-0 w-full h-full object-cover">
       </div>
     </div>
-  </footer>
+
+  </div>
+</section>
+
+<!-- Lotus divider -->
+<div class="flex items-center justify-center gap-5 py-3 bg-obsidian" aria-hidden="true">
+  <span class="h-px flex-1 max-w-[120px] bg-gradient-to-r from-transparent to-gold/40"></span>
+  <svg class="w-8 h-8 text-gold/60" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="0.9">
+    <ellipse cx="20" cy="14" rx="4" ry="10"/><ellipse cx="20" cy="14" rx="4" ry="10" transform="rotate(40 20 20)"/>
+    <ellipse cx="20" cy="14" rx="4" ry="10" transform="rotate(80 20 20)"/><ellipse cx="20" cy="14" rx="4" ry="10" transform="rotate(120 20 20)"/>
+    <ellipse cx="20" cy="14" rx="4" ry="10" transform="rotate(160 20 20)"/><ellipse cx="20" cy="14" rx="4" ry="10" transform="rotate(200 20 20)"/>
+    <ellipse cx="20" cy="14" rx="4" ry="10" transform="rotate(240 20 20)"/><ellipse cx="20" cy="14" rx="4" ry="10" transform="rotate(280 20 20)"/>
+    <ellipse cx="20" cy="14" rx="4" ry="10" transform="rotate(320 20 20)"/><circle cx="20" cy="20" r="3"/>
+  </svg>
+  <span class="h-px flex-1 max-w-[120px] bg-gradient-to-l from-transparent to-gold/40"></span>
+</div>
+
+<!-- ═══════════════ FOUNDER ═══════════════ -->
+<section id="founder" class="bg-obsidian py-24 sm:py-32">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-5 gap-14 items-start">
+
+    <div class="reveal lg:col-span-2">
+      <div class="relative aspect-[3/4] rounded-md overflow-hidden">
+        <img src="assets/founder.jpg" alt="Rajasree Prem, Founder of Prathibha School of Dance" class="absolute inset-0 w-full h-full object-cover">
+        <!-- Gold frame corners -->
+        <span class="absolute top-3 left-3 w-8 h-8 border-t border-l border-gold/60 pointer-events-none" aria-hidden="true"></span>
+        <span class="absolute top-3 right-3 w-8 h-8 border-t border-r border-gold/60 pointer-events-none" aria-hidden="true"></span>
+        <span class="absolute bottom-3 left-3 w-8 h-8 border-b border-l border-gold/60 pointer-events-none" aria-hidden="true"></span>
+        <span class="absolute bottom-3 right-3 w-8 h-8 border-b border-r border-gold/60 pointer-events-none" aria-hidden="true"></span>
+      </div>
+      <p class="mt-5 font-display text-xl text-gold">Rajasree Prem</p>
+      <p class="text-xs tracking-[0.22em] uppercase text-muted mt-1">Founder &amp; Artistic Director</p>
+    </div>
+
+    <div class="reveal lg:col-span-3">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="h-px w-8 bg-gold/60"></span>
+        <p class="text-gold text-xs tracking-[0.35em] uppercase font-medium">Meet the Founder</p>
+      </div>
+      <p class="font-accent italic text-2xl sm:text-3xl text-ivory/90 leading-snug mb-8">
+        "For Rajasree Prem, dance is not merely movement — it is prayer, memory, and emotion expressed through the body."
+      </p>
+      <p class="drop-cap text-ivory/65 leading-relaxed mb-5">
+        Founder of Prathibha School of Dance, Rajasree Prem has devoted her life to the study, practice, and teaching of Indian classical dance. Grounded in the disciplines of Bharatanatyam, Kuchipudi, and Mohiniyattam — alongside expressive semi-classical choreography — her teaching blends the rigour of the guru-shishya parampara with a warm, contemporary approach that makes classical dance accessible to every student who walks through her door.
+      </p>
+      <p class="text-ivory/65 leading-relaxed mb-10">
+        Over the years, her academy has grown into a cultural cornerstone for the Indian community in Kuwait — a place where heritage is kept alive through regular recitals, Arangetrams, and cultural showcases. Her vision remains simple: to pass on this art form, with all its discipline and beauty, to the next generation.
+      </p>
+
+      <ul class="space-y-4">
+        <li class="flex items-start gap-3">
+          <svg class="w-4 h-4 mt-1 text-gold shrink-0" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l1.3 5H14l-3.8 2.8 1.4 5L8 11.2 4.4 13.8l1.4-5L2 6h4.7z"/></svg>
+          <span class="text-ivory/65 text-sm sm:text-base">Decades of devoted training and practice in classical Indian dance</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-4 h-4 mt-1 text-gold shrink-0" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l1.3 5H14l-3.8 2.8 1.4 5L8 11.2 4.4 13.8l1.4-5L2 6h4.7z"/></svg>
+          <span class="text-ivory/65 text-sm sm:text-base">Mentor to generations of dancers across Kuwait</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-4 h-4 mt-1 text-gold shrink-0" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l1.3 5H14l-3.8 2.8 1.4 5L8 11.2 4.4 13.8l1.4-5L2 6h4.7z"/></svg>
+          <span class="text-ivory/65 text-sm sm:text-base">Choreographer and director of cultural productions and Arangetrams</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-4 h-4 mt-1 text-gold shrink-0" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l1.3 5H14l-3.8 2.8 1.4 5L8 11.2 4.4 13.8l1.4-5L2 6h4.7z"/></svg>
+          <span class="text-ivory/65 text-sm sm:text-base">Committed to preserving the guru-shishya tradition of teaching</span>
+        </li>
+      </ul>
+      <p class="font-accent italic text-xl text-gold mt-10">— Rajasree Prem</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Lotus divider -->
+<div class="flex items-center justify-center gap-5 py-3 bg-onyx" aria-hidden="true">
+  <span class="h-px flex-1 max-w-[120px] bg-gradient-to-r from-transparent to-gold/40"></span>
+  <svg class="w-8 h-8 text-gold/60" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="0.9">
+    <ellipse cx="20" cy="14" rx="4" ry="10"/><ellipse cx="20" cy="14" rx="4" ry="10" transform="rotate(40 20 20)"/>
+    <ellipse cx="20" cy="14" rx="4" ry="10" transform="rotate(80 20 20)"/><ellipse cx="20" cy="14" rx="4" ry="10" transform="rotate(120 20 20)"/>
+    <ellipse cx="20" cy="14" rx="4" ry="10" transform="rotate(160 20 20)"/><ellipse cx="20" cy="14" rx="4" ry="10" transform="rotate(200 20 20)"/>
+    <ellipse cx="20" cy="14" rx="4" ry="10" transform="rotate(240 20 20)"/><ellipse cx="20" cy="14" rx="4" ry="10" transform="rotate(280 20 20)"/>
+    <ellipse cx="20" cy="14" rx="4" ry="10" transform="rotate(320 20 20)"/><circle cx="20" cy="20" r="3"/>
+  </svg>
+  <span class="h-px flex-1 max-w-[120px] bg-gradient-to-l from-transparent to-gold/40"></span>
+</div>
+
+<!-- ═══════════════ GALLERY ═══════════════ -->
+<section id="gallery" class="bg-onyx temple-bg py-24 sm:py-32">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="reveal text-center max-w-2xl mx-auto mb-14">
+      <div class="flex items-center justify-center gap-3 mb-5">
+        <span class="h-px w-8 bg-gold/60"></span>
+        <p class="text-gold text-xs tracking-[0.35em] uppercase font-medium">Gallery</p>
+        <span class="h-px w-8 bg-gold/60"></span>
+      </div>
+      <h2 class="font-display text-3xl sm:text-5xl text-ivory leading-tight mb-5">Moments in Motion</h2>
+      <p class="text-ivory/50 leading-relaxed">Performances, practice sessions, mudras, and the milestones our students celebrate along the way.</p>
+    </div>
+
+    <!-- 30-image masonry grid (4 cols desktop, 2 cols mobile) with dense flow -->
+    <div class="reveal grid grid-cols-3 md:grid-cols-4 gap-2 sm:gap-3 [grid-auto-flow:dense] auto-rows-[150px] sm:auto-rows-[170px] md:auto-rows-[190px]">
+
+      <!-- Existing 7 named assets -->
+      <figure class="gal-fig group relative md:col-span-2 md:row-span-2 rounded-xl overflow-hidden">
+        <img src="assets/onstage.jpg" alt="On stage performance" class="absolute inset-0 w-full h-full object-cover">
+        <figcaption class="gal-cap absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent flex items-end p-5"><span class="font-display text-ivory text-lg">Senior Ladies Batch</span></figcaption>
+      </figure>
+      <figure class="gal-fig group relative rounded-xl overflow-hidden">
+        <img src="assets/kuchpudi2.jpg" alt="Kuchipudi in Motion" class="absolute inset-0 w-full h-full object-cover">
+        <figcaption class="gal-cap absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent flex items-end p-4"><span class="font-display text-ivory text-sm">Kuchipudi</span></figcaption>
+      </figure>
+      <figure class="gal-fig group relative md:row-span-2 rounded-xl overflow-hidden">
+        <img src="assets/alapadma.jpg" alt="Alapadma Mudra" class="absolute inset-0 w-full h-full object-cover">
+        <figcaption class="gal-cap absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent flex items-end p-4"><span class="font-display text-ivory text-sm">Alapadma Mudra</span></figcaption>
+      </figure>
+      <figure class="gal-fig group relative rounded-xl overflow-hidden">
+        <img src="assets/practice.jpg" alt="In Practice" class="absolute inset-0 w-full h-full object-cover">
+        <figcaption class="gal-cap absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent flex items-end p-4"><span class="font-display text-ivory text-sm">In Practice</span></figcaption>
+      </figure>
+      <figure class="gal-fig group relative md:col-span-2 rounded-xl overflow-hidden">
+        <img src="assets/group_recital.jpg" alt="Group Recital" class="absolute inset-0 w-full h-full object-cover">
+        <figcaption class="gal-cap absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent flex items-end p-5"><span class="font-display text-ivory text-lg">Group Recital</span></figcaption>
+      </figure>
+      <figure class="gal-fig group relative rounded-xl overflow-hidden">
+        <img src="assets/mentor.jpg" alt="Mentor Rajasree Prem" class="absolute inset-0 w-full h-full object-cover">
+        <figcaption class="gal-cap absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent flex items-end p-4"><span class="font-display text-ivory text-sm">Mentor — Rajasree Prem</span></figcaption>
+      </figure>
+      <figure class="gal-fig group relative rounded-xl overflow-hidden">
+        <img src="assets/arangettam.jpg" alt="Arangetram" class="absolute inset-0 w-full h-full object-cover">
+        <figcaption class="gal-cap absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent flex items-end p-4"><span class="font-display text-ivory text-sm">Arangetram</span></figcaption>
+      </figure>
+
+      <!-- 23 Placeholder slots (gallery-08 through gallery-30) -->
+      <!-- Replace each .ph div with: <img src="assets/gallery-XX.jpg" alt="..." class="absolute inset-0 w-full h-full object-cover"> -->
+      <figure class="gal-fig group relative md:col-span-2 md:row-span-2 rounded-xl overflow-hidden">
+        <img src="assets/group-pose-2.jpg" alt="Group Pose 2" class="absolute inset-0 w-full h-full object-cover">
+        <figcaption class="gal-cap absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent flex items-end p-5"><span class="font-display text-ivory text-lg">Group Dance</span></figcaption>
+      </figure>
+      <figure class="gal-fig group relative rounded-xl overflow-hidden">
+        <img src="assets/solo-posee.jpeg" alt="Solo Pose" class="absolute inset-0 w-full h-full object-cover">
+        <figcaption class="gal-cap absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent flex items-end p-4"><span class="font-display text-ivory text-sm">Mohiniyattam Grace</span></figcaption>
+      </figure>
+      <figure class="gal-fig group relative md:row-span-2 rounded-xl overflow-hidden">
+        <img src="assets/paris_laxmi.jpg" alt="..." class="absolute inset-0 w-full h-full object-cover">
+        <figcaption class="gal-cap absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent flex items-end p-4"><span class="font-display text-ivory text-sm">Paris Laxmi</span></figcaption>
+      </figure>
+      <figure class="gal-fig group relative rounded-xl overflow-hidden">
+        <img src="assets/solo-pose-2f.jpg" alt="..." class="absolute inset-0 w-full h-full object-cover">
+        <figcaption class="gal-cap absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent flex items-end p-4"><span class="font-display text-ivory text-sm">Magic of Vrindavan</span></figcaption>
+      </figure>
+      <figure class="gal-fig group relative rounded-xl overflow-hidden">
+        <img src="assets/certification.jpg" alt="..." class="absolute inset-0 w-full h-full object-cover">
+        <figcaption class="gal-cap absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent flex items-end p-4"><span class="font-display text-ivory text-sm">Certification</span></figcaption>
+      </figure>
+      <figure class="gal-fig group relative rounded-xl overflow-hidden">
+        <img src="assets/practice-session.jpg" alt="..." class="absolute inset-0 w-full h-full object-cover">
+        <figcaption class="gal-cap absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent flex items-end p-4"><span class="font-display text-ivory text-sm">Practice Session</span></figcaption>
+      </figure>
+      <figure class="gal-fig group relative rounded-xl overflow-hidden">
+        <img src="assets/makeup.jpg" alt="..." class="absolute inset-0 w-full h-full object-cover">
+        <figcaption class="gal-cap absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent flex items-end p-4"><span class="font-display text-ivory text-sm">Stage Makeup</span></figcaption>
+      </figure>
+      <figure class="gal-fig group relative md:col-span-2 rounded-xl overflow-hidden">
+        <img src="assets/cover_image.jpg" alt="..." class="absolute inset-0 w-full h-full object-cover">
+        <figcaption class="gal-cap absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent flex items-end p-5"><span class="font-display text-ivory text-lg">Mayooram-S6</span></figcaption>
+      </figure>
+      <figure class="gal-fig group relative md:col-span-2 md:row-span-2 rounded-xl overflow-hidden">
+        <img src="assets/group-dance-2.jpg" alt="..." class="absolute inset-0 w-full h-full object-cover">
+        <figcaption class="gal-cap absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent flex items-end p-5"><span class="font-display text-ivory text-lg">Group Choreography</span></figcaption>
+      </figure>
+      <figure class="gal-fig group relative rounded-xl overflow-hidden">
+        <img src="assets/junior-category.jpg" alt="..." class="absolute inset-0 w-full h-full object-cover">
+        <figcaption class="gal-cap absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent flex items-end p-4"><span class="font-display text-ivory text-sm">Junior Batch</span></figcaption>
+      </figure>
+      <figure class="gal-fig group relative md:row-span-2 rounded-xl overflow-hidden">
+        <img src="assets/mentor-2.jpeg" alt="..." class="absolute inset-0 w-full h-full object-cover">
+        <figcaption class="gal-cap absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent flex items-end p-4"><span class="font-display text-ivory text-sm">Grace flowing straight from the guru</span></figcaption>
+      </figure>
+      <figure class="gal-fig group relative rounded-xl overflow-hidden">
+        <img src="assets/mayooram-s6-1.jpg" alt="..." class="absolute inset-0 w-full h-full object-cover">
+        <figcaption class="gal-cap absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent flex items-end p-4"><span class="font-display text-ivory text-sm">Lamp Enlightning</span></figcaption>
+      </figure>
+      <figure class="gal-fig group relative rounded-xl overflow-hidden">
+        <img src="assets/eyes.jpg" alt="..." class="absolute inset-0 w-full h-full object-cover">
+        <figcaption class="gal-cap absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent flex items-end p-4"><span class="font-display text-ivory text-sm">Expressive Eyes</span></figcaption>
+      </figure>
+      <figure class="gal-fig group relative rounded-xl overflow-hidden">
+        <img src="assets/group-dance-1.jpg" alt="..." class="absolute inset-0 w-full h-full object-cover">
+        <figcaption class="gal-cap absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent flex items-end p-4"><span class="font-display text-ivory text-sm">Kids Batch</span></figcaption>
+      </figure>
+      <figure class="gal-fig group relative md:col-span-2 rounded-xl overflow-hidden">
+        <img src="assets/mangalam.jpg" alt="..." class="absolute inset-0 w-full h-full object-cover">
+        <figcaption class="gal-cap absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent flex items-end p-5"><span class="font-display text-ivory text-lg">Mangalam</span></figcaption>
+      </figure>
+      <figure class="gal-fig group relative rounded-xl overflow-hidden">
+        <img src="assets/costume.jpg" alt="..." class="absolute inset-0 w-full h-full object-cover">
+        <figcaption class="gal-cap absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent flex items-end p-4"><span class="font-display text-ivory text-sm">Costume & Ornaments</span></figcaption>
+      </figure>
+      <figure class="gal-fig group relative md:col-span-2 md:row-span-2 rounded-xl overflow-hidden">
+        <img src="assets/group-pose-1.jpg" alt="..." class="absolute inset-0 w-full h-full object-cover">
+        <figcaption class="gal-cap absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent flex items-end p-5"><span class="font-display text-ivory text-lg">Echoes of Tandava</span></figcaption>
+      </figure>
+      <figure class="gal-fig group relative rounded-xl overflow-hidden">
+        <img src="assets/junior-category.jpg" alt="..." class="absolute inset-0 w-full h-full object-cover">
+        <figcaption class="gal-cap absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent flex items-end p-4"><span class="font-display text-ivory text-sm">Behind the Scenes</span></figcaption>
+      </figure>
+      <figure class="gal-fig group relative md:row-span-2 rounded-xl overflow-hidden">
+        <img src="assets/solo-pose-best.jpg" alt="..." class="absolute inset-0 w-full h-full object-cover">
+        <figcaption class="gal-cap absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent flex items-end p-4"><span class="font-display text-ivory text-sm">Grace in Motion</span></figcaption>
+      </figure>
+      <figure class="gal-fig group relative rounded-xl overflow-hidden">
+        <img src="assets/solo-pose-4.jpg" alt="..." class="absolute inset-0 w-full h-full object-cover">
+        <figcaption class="gal-cap absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent flex items-end p-4"><span class="font-display text-ivory text-sm">Stillness with a Story</span></figcaption>
+      </figure>
+      <figure class="gal-fig group relative rounded-xl overflow-hidden">
+        <img src="assets/pooja.jpg" alt="..." class="absolute inset-0 w-full h-full object-cover">
+
+        <figcaption class="gal-cap absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent flex items-end p-4"><span class="font-display text-ivory text-sm">Pooja Ceremony</span></figcaption>
+      </figure>
+      <figure class="gal-fig group relative rounded-xl overflow-hidden">
+        <img src="assets/pose-kids-1.jpg" alt="..." class="absolute inset-0 w-full h-full object-cover">
+
+        <figcaption class="gal-cap absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent flex items-end p-4"><span class="font-display text-ivory text-sm">Kids on Stage</span></figcaption>
+      </figure>
+      <figure class="gal-fig group relative md:col-span-2 rounded-xl overflow-hidden">
+        <img src="assets/last.jpg" alt="..." class="absolute inset-0 w-full h-full object-cover">
+
+        <figcaption class="gal-cap absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent flex items-end p-5"><span class="font-display text-ivory text-lg">Performance Night</span></figcaption>
+      </figure>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ REVIEWS ═══════════════ -->
+<section id="reviews" class="bg-obsidian temple-bg py-24 sm:py-32">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="reveal text-center max-w-2xl mx-auto mb-16">
+      <div class="flex items-center justify-center gap-3 mb-5">
+        <span class="h-px w-8 bg-gold/60"></span>
+        <p class="text-gold text-xs tracking-[0.35em] uppercase font-medium">Student Reviews</p>
+        <span class="h-px w-8 bg-gold/60"></span>
+      </div>
+      <h2 class="font-display text-3xl sm:text-5xl text-ivory leading-tight mb-4">Voices from Our Community</h2>
+      <div class="flex items-center justify-center gap-2 mt-4">
+        <div class="flex gap-0.5">
+          <svg class="w-5 h-5 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-5 h-5 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-5 h-5 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-5 h-5 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-5 h-5 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        </div>
+        <span class="text-gold font-display text-xl ml-1">4.8</span>
+        <span class="text-muted text-sm">average rating</span>
+      </div>
+    </div>
+
+    <div class="reveal grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+
+      <!-- Review 1 -->
+      <article class="review-card gold-card rounded-xl p-7 bg-surface">
+        <div class="flex gap-0.5 mb-4">
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        </div>
+        <p class="font-accent italic text-ivory/85 text-lg leading-relaxed mb-5">"My daughter performed her Arangetram after three years here. The stage presence, the mudras, the expression — the audience was left speechless."</p>
+        <p class="text-gold text-sm font-medium">Priya Menon</p>
+        <p class="text-muted text-xs mt-0.5">Parent · Bharatanatyam</p>
+      </article>
+
+      <!-- Review 2 -->
+      <article class="review-card gold-card rounded-xl p-7 bg-surface">
+        <div class="flex gap-0.5 mb-4">
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        </div>
+        <p class="font-accent italic text-ivory/85 text-lg leading-relaxed mb-5">"Prathibha doesn't just teach steps — it teaches the soul of the dance. My daughter's posture, discipline, and confidence changed completely within months."</p>
+        <p class="text-gold text-sm font-medium">Arun Sharma</p>
+        <p class="text-muted text-xs mt-0.5">Parent · Kuchipudi</p>
+      </article>
+
+      <!-- Review 3 -->
+      <article class="review-card gold-card rounded-xl p-7 bg-surface">
+        <div class="flex gap-0.5 mb-4">
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        </div>
+        <p class="font-accent italic text-ivory/85 text-lg leading-relaxed mb-5">"Rajasree ma'am carries this art in her heart. You feel it in every class. No school in Kuwait comes close to this level of classical training."</p>
+        <p class="text-gold text-sm font-medium">Deepa Nair</p>
+        <p class="text-muted text-xs mt-0.5">Parent · Mohiniyattam</p>
+      </article>
+
+      <!-- Review 4 -->
+      <article class="review-card gold-card rounded-xl p-7 bg-surface">
+        <div class="flex gap-0.5 mb-4">
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        </div>
+        <p class="font-accent italic text-ivory/85 text-lg leading-relaxed mb-5">"Three years of Kuchipudi and my daughter still counts down the hours to her next class. That says everything about this school."</p>
+        <p class="text-gold text-sm font-medium">Suresh Pillai</p>
+        <p class="text-muted text-xs mt-0.5">Parent · Kuchipudi</p>
+      </article>
+
+      <!-- Review 5 -->
+      <article class="review-card gold-card rounded-xl p-7 bg-surface">
+        <div class="flex gap-0.5 mb-4">
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        </div>
+        <p class="font-accent italic text-ivory/85 text-lg leading-relaxed mb-5">"The recitals staged by Prathibha are breathtaking productions. You see months of devotion crystallised into something truly beautiful."</p>
+        <p class="text-gold text-sm font-medium">Rekha Krishnan</p>
+        <p class="text-muted text-xs mt-0.5">Parent · Bharatanatyam</p>
+      </article>
+
+      <!-- Review 6 -->
+      <article class="review-card gold-card rounded-xl p-7 bg-surface">
+        <div class="flex gap-0.5 mb-4">
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        </div>
+        <p class="font-accent italic text-ivory/85 text-lg leading-relaxed mb-5">"From a shy seven-year-old to a confident performer who commands the stage. Prathibha School of Dance made that possible."</p>
+        <p class="text-gold text-sm font-medium">Kavitha Suresh</p>
+        <p class="text-muted text-xs mt-0.5">Parent · Semi-Classical</p>
+      </article>
+
+      <!-- Review 7 -->
+      <article class="review-card gold-card rounded-xl p-7 bg-surface">
+        <div class="flex gap-0.5 mb-4">
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        </div>
+        <p class="font-accent italic text-ivory/85 text-lg leading-relaxed mb-5">"The attention to classical technique is exceptional. Mudras, abhinaya, footwork — every detail is taught with precision and deep care."</p>
+        <p class="text-gold text-sm font-medium">Ganesh Iyer</p>
+        <p class="text-muted text-xs mt-0.5">Parent · Bharatanatyam</p>
+      </article>
+
+      <!-- Review 8 -->
+      <article class="review-card gold-card rounded-xl p-7 bg-surface">
+        <div class="flex gap-0.5 mb-4">
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        </div>
+        <p class="font-accent italic text-ivory/85 text-lg leading-relaxed mb-5">"A rare combination of warmth and rigour. Children are pushed to excel but always with joy. This is what real classical training feels like."</p>
+        <p class="text-gold text-sm font-medium">Anitha Raju</p>
+        <p class="text-muted text-xs mt-0.5">Parent · Mohiniyattam</p>
+      </article>
+
+      <!-- Review 9 -->
+      <article class="review-card gold-card rounded-xl p-7 bg-surface">
+        <div class="flex gap-0.5 mb-4">
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        </div>
+        <p class="font-accent italic text-ivory/85 text-lg leading-relaxed mb-5">"I was moved to tears at my niece's first recital. The grace and expressiveness at such a young age is simply extraordinary."</p>
+        <p class="text-gold text-sm font-medium">Meera Ramachandran</p>
+        <p class="text-muted text-xs mt-0.5">Family Member · Bharatanatyam</p>
+      </article>
+
+      <!-- Review 10 -->
+      <article class="review-card gold-card rounded-xl p-7 bg-surface">
+        <div class="flex gap-0.5 mb-4">
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        </div>
+        <p class="font-accent italic text-ivory/85 text-lg leading-relaxed mb-5">"Prathibha is an institution. It preserves a living tradition and gives children a gift — poise, culture, and beauty — that stays with them forever."</p>
+        <p class="text-gold text-sm font-medium">Vijay Krishnamurthy</p>
+        <p class="text-muted text-xs mt-0.5">Parent · Kuchipudi</p>
+      </article>
+
+    </div>
+  </div>
+</section>
 
 </main>
 
+<!-- ═══════════════ CONTACT / FOOTER ═══════════════ -->
+<footer id="contact" class="bg-[#04030A] text-ivory pt-24 sm:pt-32 pb-10 relative overflow-hidden">
+
+  <!-- Large mandala watermark -->
+  <svg class="absolute -bottom-32 -right-32 w-[500px] h-[500px] text-gold opacity-[0.03] pointer-events-none" viewBox="0 0 300 300" fill="none" stroke="currentColor" stroke-width="0.6">
+    <circle cx="150" cy="150" r="140"/><circle cx="150" cy="150" r="100"/><circle cx="150" cy="150" r="60"/>
+    <line x1="10" y1="150" x2="290" y2="150"/><line x1="150" y1="10" x2="150" y2="290"/>
+    <line x1="50" y1="50" x2="250" y2="250"/><line x1="250" y1="50" x2="50" y2="250"/>
+    <ellipse cx="150" cy="80" rx="6" ry="16"/><ellipse cx="150" cy="80" rx="6" ry="16" transform="rotate(45 150 150)"/>
+    <ellipse cx="150" cy="80" rx="6" ry="16" transform="rotate(90 150 150)"/><ellipse cx="150" cy="80" rx="6" ry="16" transform="rotate(135 150 150)"/>
+    <ellipse cx="150" cy="80" rx="6" ry="16" transform="rotate(180 150 150)"/><ellipse cx="150" cy="80" rx="6" ry="16" transform="rotate(225 150 150)"/>
+    <ellipse cx="150" cy="80" rx="6" ry="16" transform="rotate(270 150 150)"/><ellipse cx="150" cy="80" rx="6" ry="16" transform="rotate(315 150 150)"/>
+  </svg>
+
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 relative">
+    <div class="reveal text-center max-w-2xl mx-auto mb-16">
+      <div class="flex items-center justify-center gap-3 mb-5">
+        <span class="h-px w-8 bg-gold/60"></span>
+        <p class="text-gold text-xs tracking-[0.35em] uppercase font-medium">Get in Touch</p>
+        <span class="h-px w-8 bg-gold/60"></span>
+      </div>
+      <h2 class="font-display text-3xl sm:text-5xl text-ivory leading-tight">Visit, Call, or Write to Us</h2>
+    </div>
+
+    <div class="reveal max-w-4xl mx-auto">
+
+      <div class="grid sm:grid-cols-3 gap-8 mb-14 text-center">
+
+        <div class="flex flex-col items-center">
+          <span class="w-12 h-12 rounded-full border border-gold/30 flex items-center justify-center mb-4 text-gold">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path d="M12 21s-7-7.5-7-12a7 7 0 1 1 14 0c0 4.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          </span>
+          <p class="text-xs tracking-[0.2em] uppercase text-muted mb-2">Academy Address</p>
+          <p class="text-ivory/80 leading-relaxed text-sm">Block 4, Street 25<br>Mangaf, Al-Ahmadi, Kuwait</p>
+          <a href="https://maps.app.goo.gl/6eXpiknGN6Hf24E87" target="_blank" rel="noopener noreferrer" class="inline-block mt-3 text-sm text-gold hover:text-gold-bright transition-colors">Get Directions &rarr;</a>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <span class="w-12 h-12 rounded-full border border-gold/30 flex items-center justify-center mb-4 text-gold">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path d="M4 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L14 13l5 2v4a2 2 0 0 1-2 2C9.5 21 3 14.5 3 6a2 2 0 0 1 2-2z"/></svg>
+          </span>
+          <p class="text-xs tracking-[0.2em] uppercase text-muted mb-2">Call Us</p>
+          <a href="tel:+96567648787" class="text-ivory/80 hover:text-gold transition-colors">+965 6764 8787</a>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <span class="w-12 h-12 rounded-full border border-gold/30 flex items-center justify-center mb-4 text-gold">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          </span>
+          <p class="text-xs tracking-[0.2em] uppercase text-muted mb-2">Email Us</p>
+          <a href="mailto:psdkuwait@gmail.com" class="text-ivory/80 hover:text-gold transition-colors break-all text-sm">psdkuwait@gmail.com</a>
+        </div>
+
+      </div>
+
+      <!-- Social icons -->
+      <div class="flex items-center justify-center gap-3 mb-12">
+        <a href="https://www.instagram.com/prathibhaschoolofdance/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-11 h-11 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-obsidian hover:border-gold transition-all">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.9" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://www.facebook.com/prathibhaschoolofdance/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-11 h-11 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-obsidian hover:border-gold transition-all">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path d="M14 9.2h2.3V6.3H14c-1.7 0-3 1.4-3 3.1v1.8H9v3h2v6.3h3v-6.3h2.2l.5-3H14V9.2z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@psdkuwait" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="w-11 h-11 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-obsidian hover:border-gold transition-all">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M11 9.7l4 2.3-4 2.3z" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
+
+      <!-- Map -->
+      <div>
+        <p class="text-xs tracking-[0.2em] uppercase text-muted mb-3 text-center">Find Us</p>
+        <div class="aspect-video rounded-xl overflow-hidden border border-gold/15">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13944.394793521276!2d48.116049428047766!3d29.102767386128953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf063c7b169555%3A0x3574f3cb6952b806!2sPrathibha%20School%20Of%20Dance!5e0!3m2!1sen!2skw!4v1781989108140!5m2!1sen!2skw"
+            class="w-full h-full border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Prathibha School of Dance location on Google Maps"></iframe>
+        </div>
+        <p class="text-center mt-3">
+          <a href="https://maps.app.goo.gl/6eXpiknGN6Hf24E87" target="_blank" rel="noopener noreferrer" class="text-sm text-gold hover:text-gold-bright transition-colors">Open in Google Maps &rarr;</a>
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="mt-20 pt-7 border-t border-gold/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted">
+      <p>&copy; <span id="year"></span> Prathibha School of Dance, Kuwait. All rights reserved.</p>
+      <p class="font-accent italic text-muted/70">Crafted with reverence for tradition.</p>
+    </div>
+  </div>
+</footer>
+
 <script>
-  // Mobile menu
+  // ─── Mobile menu ───
   var menuBtn = document.getElementById('menu-btn');
   var closeBtn = document.getElementById('menu-close-btn');
   var mobileMenu = document.getElementById('mobile-menu');
-
-  function openMenu() {
-    mobileMenu.classList.remove('hidden');
-    menuBtn.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeMenu() {
-    mobileMenu.classList.add('hidden');
-    menuBtn.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
-  }
+  function openMenu() { mobileMenu.classList.remove('hidden'); menuBtn.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; }
+  function closeMenu() { mobileMenu.classList.add('hidden'); menuBtn.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
   menuBtn.addEventListener('click', openMenu);
   closeBtn.addEventListener('click', closeMenu);
-  mobileMenu.querySelectorAll('a').forEach(function (a) {
-    a.addEventListener('click', closeMenu);
-  });
+  mobileMenu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
 
-  // Nav shadow on scroll
+  // ─── Nav on scroll ───
   var nav = document.getElementById('site-nav');
   function onScroll() {
-    if (window.scrollY > 24) {
-      nav.classList.add('shadow-md');
-      nav.classList.add('bg-cream/95');
-      nav.classList.remove('bg-cream/80');
+    if (window.scrollY > 40) {
+      nav.style.background = 'rgba(7,5,14,0.95)';
+      nav.style.backdropFilter = 'blur(16px)';
+      nav.style.borderBottomColor = 'rgba(201,168,76,0.12)';
+      nav.style.boxShadow = '0 4px 40px rgba(0,0,0,0.5)';
     } else {
-      nav.classList.remove('shadow-md');
-      nav.classList.remove('bg-cream/95');
-      nav.classList.add('bg-cream/80');
+      nav.style.background = 'transparent';
+      nav.style.backdropFilter = 'none';
+      nav.style.borderBottomColor = 'transparent';
+      nav.style.boxShadow = 'none';
     }
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  // Scroll reveal
+  // ─── Scroll reveal ───
   var reveals = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    reveals.forEach(function (el) { io.observe(el); });
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){ if(entry.isIntersecting){ entry.target.classList.add('in-view'); io.unobserve(entry.target); } });
+    }, { threshold: 0.1 });
+    reveals.forEach(function(el){ io.observe(el); });
   } else {
-    reveals.forEach(function (el) { el.classList.add('in-view'); });
+    reveals.forEach(function(el){ el.classList.add('in-view'); });
   }
 
-  // Footer year
+  // ─── Year ───
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 

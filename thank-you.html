@@ -6,297 +6,330 @@
 <title>Thank You | Prathibha School of Dance — Kuwait</title>
 <meta name="description" content="Thank you for registering with Prathibha School of Dance, Kuwait. Our team will be in touch shortly to confirm your enrolment.">
 <meta name="robots" content="noindex">
-<meta name="theme-color" content="#800020">
-<link rel="icon" type="image/jpeg" href="assets\icon.png">
+<meta name="theme-color" content="#C9A84C">
+<link rel="icon" type="image/jpeg" href="assets/icon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = {
     theme: {
       extend: {
         colors: {
-          cream: '#FAF6EF',
-          offwhite: '#F3EEE2',
-          ink: '#2A211D',
-          maroon: {
-            DEFAULT: '#800020',
-            dark: '#56000F',
-            light: '#A33655',
-            50: '#FBEEF1'
-          },
-          gold: {
-            DEFAULT: '#C9A227',
-            dark: '#9C7A1B',
-            light: '#E8D9A0'
-          }
+          obsidian: '#07050E',
+          onyx: '#0D0A1E',
+          surface: '#13102A',
+          ivory: '#EDE8D5',
+          muted: '#8A7E65',
+          gold: { DEFAULT: '#C9A84C', bright: '#F0CC66', dim: '#6B5820', glow: 'rgba(201,168,76,0.12)' },
+          teal: { DEFAULT: '#1B7A82', light: '#22A5B0' },
         },
         fontFamily: {
           display: ['"Playfair Display"', 'serif'],
           accent: ['"Cormorant Garamond"', 'serif'],
-          body: ['"Inter"', 'sans-serif']
-        }
+          body: ['"Inter"', 'sans-serif'],
+        },
       }
     }
   }
 </script>
 
 <style>
-  html { scroll-behavior: auto; }
-  @media (prefers-reduced-motion: no-preference) {
-    html { scroll-behavior: smooth; }
-  }
-  body { font-family: 'Inter', sans-serif; background-color: #FAF6EF; color: #2A211D; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { font-family: 'Inter', sans-serif; background-color: #07050E; color: #EDE8D5; overflow-x: hidden; }
 
-  /* --- Scroll reveal --- */
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: #07050E; }
+  ::-webkit-scrollbar-thumb { background: #3A2E18; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #C9A84C; }
+
+  .temple-bg {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M30 3L57 30L30 57L3 30Z' fill='none' stroke='rgba(201%2C168%2C76%2C0.06)' stroke-width='0.7'/%3E%3Ccircle cx='30' cy='30' r='5' fill='none' stroke='rgba(201%2C168%2C76%2C0.05)' stroke-width='0.6'/%3E%3C/svg%3E");
+    background-size: 60px 60px;
+  }
+
   .reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1); }
   .reveal.in-view { opacity: 1; transform: translateY(0); }
+  @media (prefers-reduced-motion: reduce) { .reveal, .reveal.in-view { opacity: 1 !important; transform: none !important; transition: none !important; } }
 
-  /* --- Hero load animation --- */
-  @keyframes fadeUp { from { opacity: 0; transform: translateY(22px);} to { opacity: 1; transform: translateY(0);} }
-  .animate-fade-up { animation: fadeUp 1s cubic-bezier(.16,1,.3,1) both; }
+  #site-nav { transition: background .3s, box-shadow .3s, border-color .3s; }
 
-  @media (prefers-reduced-motion: reduce) {
-    .reveal, .reveal.in-view { opacity: 1 !important; transform: none !important; transition: none !important; }
-    .animate-fade-up { animation: none !important; opacity: 1 !important; transform: none !important; }
+  a:focus-visible, button:focus-visible { outline: 2px solid #C9A84C; outline-offset: 3px; }
+  ::selection { background: #C9A84C; color: #07050E; }
+
+  /* ─── Checkmark ring pulse ─── */
+  @keyframes ringPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(201,168,76,0.0); }
+    50% { box-shadow: 0 0 0 14px rgba(201,168,76,0.1); }
   }
+  .ring-pulse { animation: ringPulse 2.4s ease-in-out infinite; }
+  @media (prefers-reduced-motion: reduce) { .ring-pulse { animation: none; } }
 
-  /* Focus visibility */
-  a:focus-visible, button:focus-visible { outline: 2px solid #C9A227; outline-offset: 3px; }
+  /* ─── Draw checkmark ─── */
+  @keyframes drawCheck {
+    from { stroke-dashoffset: 60; }
+    to { stroke-dashoffset: 0; }
+  }
+  .check-path {
+    stroke-dasharray: 60;
+    stroke-dashoffset: 60;
+    animation: drawCheck .7s cubic-bezier(.16,1,.3,1) .4s forwards;
+  }
+  @media (prefers-reduced-motion: reduce) { .check-path { stroke-dashoffset: 0; animation: none; } }
 
-  ::selection { background: #C9A227; color: #2A211D; }
+  /* ─── Fade in for the whole card ─── */
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+  .afu { animation: fadeUp 1s cubic-bezier(.16,1,.3,1) both; }
 </style>
 </head>
 
-<body class="bg-cream text-ink antialiased">
+<body class="bg-obsidian text-ivory antialiased">
 
-<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-maroon focus:text-cream focus:px-4 focus:py-2 focus:rounded-md">Skip to main content</a>
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-gold focus:text-obsidian focus:px-4 focus:py-2 focus:rounded-md">Skip to main content</a>
 
-<!-- ============ NAVIGATION ============ -->
-<header id="site-nav" class="fixed top-0 inset-x-0 z-50 bg-cream/80 backdrop-blur-md border-b border-maroon/10 transition-all duration-300">
+<!-- ═══════════════ NAVIGATION ═══════════════ -->
+<header id="site-nav" class="fixed top-0 inset-x-0 z-50 border-b border-transparent">
   <nav class="max-w-7xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between" aria-label="Primary">
 
-    <!-- Logo -->
     <a href="index.html" class="flex items-center gap-3 group">
-      <img src="assets\logo.jpeg" alt="Prathibha School of Dance logo" class="w-11 h-11 rounded-full object-cover">
+      <img src="assets/logo.jpeg" alt="Prathibha School of Dance logo" class="w-11 h-11 rounded-full object-cover ring-1 ring-gold/30 group-hover:ring-gold/60 transition-all">
       <span class="leading-tight">
-        <span class="block font-display text-lg sm:text-xl text-maroon font-semibold tracking-wide">Prathibha</span>
-        <span class="block text-[9px] sm:text-[10px] tracking-[0.25em] text-maroon/60 uppercase">School of Dance</span>
+        <span class="block font-display text-lg sm:text-xl text-gold font-semibold tracking-wide">Prathibha</span>
+        <span class="block text-[9px] sm:text-[10px] tracking-[0.28em] text-gold/50 uppercase">School of Dance</span>
       </span>
     </a>
 
-    <!-- Desktop links -->
-    <ul class="hidden md:flex items-center gap-10 font-body text-sm tracking-wide text-ink/80">
-      <li><a href="index.html#about" class="hover:text-maroon transition-colors">About</a></li>
-      <li><a href="index.html#founder" class="hover:text-maroon transition-colors">Founder</a></li>
-      <li><a href="index.html#gallery" class="hover:text-maroon transition-colors">Gallery</a></li>
-      <li><a href="#contact" class="hover:text-maroon transition-colors">Contact</a></li>
+    <ul class="hidden md:flex items-center gap-9 font-body text-sm tracking-wide text-ivory/70">
+      <li><a href="index.html#about" class="hover:text-gold transition-colors">About</a></li>
+      <li><a href="index.html#founder" class="hover:text-gold transition-colors">Founder</a></li>
+      <li><a href="index.html#gallery" class="hover:text-gold transition-colors">Gallery</a></li>
+      <li><a href="index.html#reviews" class="hover:text-gold transition-colors">Reviews</a></li>
+      <li><a href="#contact" class="hover:text-gold transition-colors">Contact</a></li>
     </ul>
 
-    <div class="hidden md:block">
-      <a href="register.html" class="inline-flex items-center gap-2 bg-maroon text-cream text-sm font-medium tracking-wide px-6 py-2.5 rounded-full hover:bg-maroon-dark transition-colors">
-        Register Now
-      </a>
-    </div>
+    <a href="register.html" class="hidden md:inline-flex items-center gap-2 border border-gold/60 text-gold text-sm font-medium tracking-widest px-6 py-2.5 rounded-full hover:bg-gold hover:text-obsidian transition-all duration-300">
+      Register Now
+    </a>
 
-    <!-- Mobile menu button -->
-    <button id="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" class="md:hidden text-maroon p-2 -mr-2">
+    <button id="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" class="md:hidden text-gold p-2 -mr-2">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" class="w-7 h-7"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
     </button>
   </nav>
 
-  <!-- Mobile menu overlay -->
-  <div id="mobile-menu" class="hidden md:hidden fixed inset-0 top-20 bg-cream z-40">
+  <div id="mobile-menu" class="hidden md:hidden fixed inset-0 top-20 bg-obsidian z-40 temple-bg">
     <div class="flex flex-col h-full px-8 pt-10 pb-10">
-      <ul class="flex flex-col gap-7 font-display text-3xl text-maroon">
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#founder">Founder</a></li>
-        <li><a href="index.html#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <ul class="flex flex-col gap-8 font-display text-4xl text-ivory/90">
+        <li><a href="index.html#about" class="hover:text-gold transition-colors block">About</a></li>
+        <li><a href="index.html#founder" class="hover:text-gold transition-colors block">Founder</a></li>
+        <li><a href="index.html#gallery" class="hover:text-gold transition-colors block">Gallery</a></li>
+        <li><a href="index.html#reviews" class="hover:text-gold transition-colors block">Reviews</a></li>
+        <li><a href="#contact" class="hover:text-gold transition-colors block">Contact</a></li>
       </ul>
-      <a href="register.html" class="mt-auto inline-flex justify-center items-center gap-2 bg-maroon text-cream text-base font-medium tracking-wide px-6 py-4 rounded-full">
+      <a href="register.html" class="mt-auto inline-flex justify-center items-center border border-gold/60 text-gold text-base font-medium tracking-widest px-6 py-4 rounded-full hover:bg-gold hover:text-obsidian transition-all">
         Register Now
       </a>
     </div>
-    <button id="menu-close-btn" type="button" aria-label="Close menu" class="absolute top-6 right-5 text-maroon p-2">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" class="w-7 h-7"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    <button id="menu-close-btn" type="button" aria-label="Close menu" class="absolute top-6 right-6 text-gold p-2">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" class="w-7 h-7"><path d="M6 6l12 12M18 6L6 18"/></svg>
     </button>
   </div>
 </header>
 
 <main id="main">
 
-  <!-- ============ THANK YOU ============ -->
-  <section class="pt-40 sm:pt-48 pb-28 sm:pb-36 bg-cream min-h-[70vh] flex items-center">
-    <div class="reveal max-w-xl mx-auto px-5 sm:px-8 text-center">
+<!-- ═══════════════ THANK YOU ═══════════════ -->
+<section class="min-h-[80vh] flex items-center justify-center py-32 sm:py-40 temple-bg relative overflow-hidden">
 
-      <span class="inline-flex w-16 h-16 rounded-full border-2 border-gold items-center justify-center mb-8 text-gold">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><path d="M5 13l4 4L19 7"/></svg>
-      </span>
+  <!-- Large faint mandala behind the card -->
+  <svg class="absolute inset-0 m-auto opacity-[0.04] w-[600px] h-[600px] pointer-events-none" viewBox="0 0 300 300" fill="none" stroke="#C9A84C" stroke-width="0.5">
+    <circle cx="150" cy="150" r="140"/><circle cx="150" cy="150" r="120"/><circle cx="150" cy="150" r="100"/>
+    <circle cx="150" cy="150" r="80"/><circle cx="150" cy="150" r="60"/><circle cx="150" cy="150" r="40"/>
+    <line x1="10" y1="150" x2="290" y2="150"/><line x1="150" y1="10" x2="150" y2="290"/>
+    <line x1="50" y1="50" x2="250" y2="250"/><line x1="250" y1="50" x2="50" y2="250"/>
+    <ellipse cx="150" cy="80" rx="6" ry="16"/><ellipse cx="150" cy="80" rx="6" ry="16" transform="rotate(45 150 150)"/>
+    <ellipse cx="150" cy="80" rx="6" ry="16" transform="rotate(90 150 150)"/><ellipse cx="150" cy="80" rx="6" ry="16" transform="rotate(135 150 150)"/>
+    <ellipse cx="150" cy="80" rx="6" ry="16" transform="rotate(180 150 150)"/><ellipse cx="150" cy="80" rx="6" ry="16" transform="rotate(225 150 150)"/>
+    <ellipse cx="150" cy="80" rx="6" ry="16" transform="rotate(270 150 150)"/><ellipse cx="150" cy="80" rx="6" ry="16" transform="rotate(315 150 150)"/>
+  </svg>
 
-      <p class="text-maroon text-xs sm:text-sm tracking-[0.3em] uppercase font-medium mb-4">Registration Received</p>
-      <h1 class="font-display text-4xl sm:text-5xl text-ink leading-tight mb-6">Thank You</h1>
-      <p class="font-accent italic text-ink/65 text-lg sm:text-xl leading-relaxed mb-10">
-        We've received your registration. A member of our team will reach out shortly to confirm enrolment and answer any questions you may have.
-      </p>
+  <div class="relative max-w-xl mx-auto px-5 sm:px-8 text-center">
 
-      <a href="index.html" class="inline-flex items-center justify-center gap-2 bg-maroon text-cream font-semibold tracking-wide px-8 py-3.5 rounded-full hover:bg-maroon-dark transition-colors">
+    <!-- Animated gold checkmark ring -->
+    <div class="flex justify-center mb-8">
+      <div class="ring-pulse w-24 h-24 rounded-full border-2 border-gold/60 flex items-center justify-center relative">
+        <!-- Gold radial glow -->
+        <div class="absolute inset-0 rounded-full bg-gold/5"></div>
+        <svg viewBox="0 0 40 40" fill="none" stroke="#C9A84C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 relative z-10">
+          <path class="check-path" d="M8 21l8 8 16-16"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Gold ornament -->
+    <div class="afu flex items-center justify-center gap-3 mb-5" style="animation-delay:.1s">
+      <span class="h-px w-8 bg-gradient-to-r from-transparent to-gold/60"></span>
+      <p class="text-gold text-xs tracking-[0.4em] uppercase font-medium">Registration Received</p>
+      <span class="h-px w-8 bg-gradient-to-l from-transparent to-gold/60"></span>
+    </div>
+
+    <h1 class="afu font-display text-5xl sm:text-6xl text-ivory leading-tight mb-3" style="animation-delay:.2s">
+      Thank You
+    </h1>
+    <p class="afu font-accent italic text-gold text-2xl sm:text-3xl mb-8" style="animation-delay:.3s">
+      — Prathibha School of Dance
+    </p>
+
+    <p class="afu font-accent italic text-ivory/60 text-lg sm:text-xl leading-relaxed mb-12" style="animation-delay:.4s">
+      We've received your registration. A member of our team will reach out shortly to confirm your enrolment and answer any questions you may have.
+    </p>
+
+    <!-- Lotus divider -->
+    <div class="afu flex items-center justify-center gap-4 mb-12" style="animation-delay:.5s" aria-hidden="true">
+      <span class="h-px w-10 bg-gold/30"></span>
+      <svg class="w-6 h-6 text-gold/50" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="0.9">
+        <ellipse cx="20" cy="14" rx="4" ry="10"/><ellipse cx="20" cy="14" rx="4" ry="10" transform="rotate(40 20 20)"/>
+        <ellipse cx="20" cy="14" rx="4" ry="10" transform="rotate(80 20 20)"/><ellipse cx="20" cy="14" rx="4" ry="10" transform="rotate(120 20 20)"/>
+        <ellipse cx="20" cy="14" rx="4" ry="10" transform="rotate(160 20 20)"/><ellipse cx="20" cy="14" rx="4" ry="10" transform="rotate(200 20 20)"/>
+        <ellipse cx="20" cy="14" rx="4" ry="10" transform="rotate(240 20 20)"/><ellipse cx="20" cy="14" rx="4" ry="10" transform="rotate(280 20 20)"/>
+        <ellipse cx="20" cy="14" rx="4" ry="10" transform="rotate(320 20 20)"/><circle cx="20" cy="20" r="3"/>
+      </svg>
+      <span class="h-px w-10 bg-gold/30"></span>
+    </div>
+
+    <div class="afu flex flex-col sm:flex-row gap-4 justify-center" style="animation-delay:.55s">
+      <a href="index.html" class="inline-flex items-center justify-center gap-2 bg-gold text-obsidian font-semibold tracking-widest text-sm uppercase px-9 py-3.5 rounded-full hover:bg-gold-bright transition-colors">
         Back to Home
       </a>
+      <a href="register.html" class="inline-flex items-center justify-center gap-2 border border-gold/40 text-gold font-medium tracking-wide px-9 py-3.5 rounded-full hover:border-gold hover:bg-gold/5 transition-all">
+        New Registration
+      </a>
     </div>
-  </section>
+
+  </div>
+</section>
 
 </main>
 
-<!-- ============ CONTACT / FOOTER ============ -->
-<footer id="contact" class="bg-maroon-dark text-cream pt-24 sm:pt-32 pb-10 relative overflow-hidden">
+<!-- ═══════════════ CONTACT / FOOTER ═══════════════ -->
+<footer id="contact" class="bg-[#04030A] text-ivory pt-24 sm:pt-32 pb-10 relative overflow-hidden">
 
-  <svg class="absolute -top-10 -right-10 w-72 h-72 text-gold opacity-[0.06] pointer-events-none" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="0.6">
-    <path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z"/>
-    <path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(72 16 16)"/>
-    <path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(144 16 16)"/>
-    <path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(216 16 16)"/>
-    <path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(288 16 16)"/>
-    <circle cx="16" cy="16" r="1.8"/>
+  <svg class="absolute -bottom-32 -right-32 w-[500px] h-[500px] text-gold opacity-[0.03] pointer-events-none" viewBox="0 0 300 300" fill="none" stroke="currentColor" stroke-width="0.6">
+    <circle cx="150" cy="150" r="140"/><circle cx="150" cy="150" r="100"/><circle cx="150" cy="150" r="60"/>
+    <line x1="10" y1="150" x2="290" y2="150"/><line x1="150" y1="10" x2="150" y2="290"/>
+    <line x1="50" y1="50" x2="250" y2="250"/><line x1="250" y1="50" x2="50" y2="250"/>
+    <ellipse cx="150" cy="80" rx="6" ry="16"/><ellipse cx="150" cy="80" rx="6" ry="16" transform="rotate(45 150 150)"/>
+    <ellipse cx="150" cy="80" rx="6" ry="16" transform="rotate(90 150 150)"/><ellipse cx="150" cy="80" rx="6" ry="16" transform="rotate(135 150 150)"/>
+    <ellipse cx="150" cy="80" rx="6" ry="16" transform="rotate(180 150 150)"/><ellipse cx="150" cy="80" rx="6" ry="16" transform="rotate(225 150 150)"/>
+    <ellipse cx="150" cy="80" rx="6" ry="16" transform="rotate(270 150 150)"/><ellipse cx="150" cy="80" rx="6" ry="16" transform="rotate(315 150 150)"/>
   </svg>
 
   <div class="max-w-7xl mx-auto px-5 sm:px-8 relative">
     <div class="reveal text-center max-w-2xl mx-auto mb-16">
-      <p class="text-gold text-xs sm:text-sm tracking-[0.3em] uppercase font-medium mb-4">Get in Touch</p>
-      <h2 class="font-display text-3xl sm:text-5xl text-cream leading-tight">Visit, Call, or Write to Us</h2>
+      <div class="flex items-center justify-center gap-3 mb-5">
+        <span class="h-px w-8 bg-gold/60"></span>
+        <p class="text-gold text-xs tracking-[0.35em] uppercase font-medium">Get in Touch</p>
+        <span class="h-px w-8 bg-gold/60"></span>
+      </div>
+      <h2 class="font-display text-3xl sm:text-5xl text-ivory leading-tight">Visit, Call, or Write to Us</h2>
     </div>
 
     <div class="reveal max-w-4xl mx-auto">
 
-      <div class="grid sm:grid-cols-3 gap-10 mb-14 text-center">
-
+      <div class="grid sm:grid-cols-3 gap-8 mb-14 text-center">
         <div class="flex flex-col items-center">
-          <span class="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center mb-4 text-gold">
+          <span class="w-12 h-12 rounded-full border border-gold/30 flex items-center justify-center mb-4 text-gold">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path d="M12 21s-7-7.5-7-12a7 7 0 1 1 14 0c0 4.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
           </span>
-          <p class="text-xs tracking-[0.2em] uppercase text-cream/50 mb-2">Academy Address</p>
-          <p class="text-cream/90 leading-relaxed">Block 4, Street 26,<br>Mangaf, Al-Ahmadi Governorate, Kuwait</p>
-          <a href="https://maps.app.goo.gl/6eXpiknGN6Hf24E87" target="_blank" rel="noopener noreferrer" class="inline-block mt-3 text-sm text-gold hover:text-gold-light transition-colors">Get Directions &rarr;</a>
+          <p class="text-xs tracking-[0.2em] uppercase text-muted mb-2">Academy Address</p>
+          <p class="text-ivory/80 leading-relaxed text-sm">Block 4, Street 25<br>Mangaf, Al-Ahmadi, Kuwait</p>
+          <a href="https://maps.app.goo.gl/6eXpiknGN6Hf24E87" target="_blank" rel="noopener noreferrer" class="inline-block mt-3 text-sm text-gold hover:text-gold-bright transition-colors">Get Directions &rarr;</a>
         </div>
-
         <div class="flex flex-col items-center">
-          <span class="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center mb-4 text-gold">
+          <span class="w-12 h-12 rounded-full border border-gold/30 flex items-center justify-center mb-4 text-gold">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path d="M4 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L14 13l5 2v4a2 2 0 0 1-2 2C9.5 21 3 14.5 3 6a2 2 0 0 1 2-2z"/></svg>
           </span>
-          <p class="text-xs tracking-[0.2em] uppercase text-cream/50 mb-2">Call Us</p>
-          <a href="tel:+96567648787" class="text-cream/90 hover:text-gold transition-colors">+965 6764 8787</a>
+          <p class="text-xs tracking-[0.2em] uppercase text-muted mb-2">Call Us</p>
+          <a href="tel:+96567648787" class="text-ivory/80 hover:text-gold transition-colors">+965 6764 8787</a>
         </div>
-
         <div class="flex flex-col items-center">
-          <span class="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center mb-4 text-gold">
+          <span class="w-12 h-12 rounded-full border border-gold/30 flex items-center justify-center mb-4 text-gold">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
           </span>
-          <p class="text-xs tracking-[0.2em] uppercase text-cream/50 mb-2">Email Us</p>
-          <a href="mailto:psdkuwait@gmail.com" class="text-cream/90 hover:text-gold transition-colors break-all">psdkuwait@gmail.com</a>
+          <p class="text-xs tracking-[0.2em] uppercase text-muted mb-2">Email Us</p>
+          <a href="mailto:psdkuwait@gmail.com" class="text-ivory/80 hover:text-gold transition-colors text-sm break-all">psdkuwait@gmail.com</a>
         </div>
-
       </div>
 
-      <!-- Social -->
-      <div class="flex items-center justify-center gap-3 mb-14">
-        <a href="https://www.instagram.com/prathibhaschoolofdance/" target="_blank" rel="noopener noreferrer" aria-label="Prathibha School of Dance on Instagram" class="w-11 h-11 rounded-full border border-gold/40 flex items-center justify-center text-gold hover:bg-gold hover:text-maroon-dark transition-colors">
+      <div class="flex items-center justify-center gap-3 mb-12">
+        <a href="https://www.instagram.com/prathibhaschoolofdance/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-11 h-11 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-obsidian hover:border-gold transition-all">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.9" fill="currentColor" stroke="none"/></svg>
         </a>
-        <a href="https://www.facebook.com/prathibhaschoolofdance/" target="_blank" rel="noopener noreferrer" aria-label="Prathibha School of Dance on Facebook" class="w-11 h-11 rounded-full border border-gold/40 flex items-center justify-center text-gold hover:bg-gold hover:text-maroon-dark transition-colors">
+        <a href="https://www.facebook.com/prathibhaschoolofdance/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-11 h-11 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-obsidian hover:border-gold transition-all">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path d="M14 9.2h2.3V6.3H14c-1.7 0-3 1.4-3 3.1v1.8H9v3h2v6.3h3v-6.3h2.2l.5-3H14V9.2z"/></svg>
         </a>
-        <a href="https://www.youtube.com/@psdkuwait" target="_blank" rel="noopener noreferrer" aria-label="Prathibha School of Dance on YouTube" class="w-11 h-11 rounded-full border border-gold/40 flex items-center justify-center text-gold hover:bg-gold hover:text-maroon-dark transition-colors">
+        <a href="https://www.youtube.com/@psdkuwait" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="w-11 h-11 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-obsidian hover:border-gold transition-all">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M11 9.7l4 2.3-4 2.3z" fill="currentColor" stroke="none"/></svg>
         </a>
       </div>
 
-      <!-- Map -->
       <div>
-        <p class="text-xs tracking-[0.2em] uppercase text-cream/50 mb-3 text-center">Find Us</p>
-        <div class="aspect-video rounded-md overflow-hidden border border-gold/25">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13944.394793521276!2d48.116049428047766!3d29.102767386128953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf063c7b169555%3A0x3574f3cb6952b806!2sPrathibha%20School%20Of%20Dance!5e0!3m2!1sen!2skw!4v1781989108140!5m2!1sen!2skw"
-            class="w-full h-full border-0"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Map showing the approximate location of Prathibha School of Dance, Kuwait">
-          </iframe>
+        <p class="text-xs tracking-[0.2em] uppercase text-muted mb-3 text-center">Find Us</p>
+        <div class="aspect-video rounded-xl overflow-hidden border border-gold/15">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13944.394793521276!2d48.116049428047766!3d29.102767386128953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf063c7b169555%3A0x3574f3cb6952b806!2sPrathibha%20School%20Of%20Dance!5e0!3m2!1sen!2skw!4v1781989108140!5m2!1sen!2skw"
+            class="w-full h-full border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Prathibha School of Dance on Google Maps"></iframe>
         </div>
         <p class="text-center mt-3">
-          <a href="https://maps.app.goo.gl/6eXpiknGN6Hf24E87" target="_blank" rel="noopener noreferrer" class="text-sm text-gold hover:text-gold-light transition-colors">Open in Google Maps &rarr;</a>
+          <a href="https://maps.app.goo.gl/6eXpiknGN6Hf24E87" target="_blank" rel="noopener noreferrer" class="text-sm text-gold hover:text-gold-bright transition-colors">Open in Google Maps &rarr;</a>
         </p>
       </div>
 
     </div>
 
-    <!-- Bottom bar -->
-    <div class="mt-20 pt-7 border-t border-cream/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-cream/45">
+    <div class="mt-20 pt-7 border-t border-gold/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted">
       <p>&copy; <span id="year"></span> Prathibha School of Dance, Kuwait. All rights reserved.</p>
-      <p class="font-accent italic text-cream/40">Crafted with reverence for tradition.</p>
+      <p class="font-accent italic text-muted/70">Crafted with reverence for tradition.</p>
     </div>
   </div>
 </footer>
 
 <script>
-  // Mobile menu
   var menuBtn = document.getElementById('menu-btn');
   var closeBtn = document.getElementById('menu-close-btn');
   var mobileMenu = document.getElementById('mobile-menu');
-
-  function openMenu() {
-    mobileMenu.classList.remove('hidden');
-    menuBtn.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeMenu() {
-    mobileMenu.classList.add('hidden');
-    menuBtn.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
-  }
+  function openMenu() { mobileMenu.classList.remove('hidden'); menuBtn.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; }
+  function closeMenu() { mobileMenu.classList.add('hidden'); menuBtn.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
   menuBtn.addEventListener('click', openMenu);
   closeBtn.addEventListener('click', closeMenu);
-  mobileMenu.querySelectorAll('a').forEach(function (a) {
-    a.addEventListener('click', closeMenu);
-  });
+  mobileMenu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
 
-  // Nav shadow on scroll
   var nav = document.getElementById('site-nav');
   function onScroll() {
-    if (window.scrollY > 24) {
-      nav.classList.add('shadow-md');
-      nav.classList.add('bg-cream/95');
-      nav.classList.remove('bg-cream/80');
+    if (window.scrollY > 40) {
+      nav.style.background = 'rgba(7,5,14,0.95)';
+      nav.style.backdropFilter = 'blur(16px)';
+      nav.style.borderBottomColor = 'rgba(201,168,76,0.12)';
+      nav.style.boxShadow = '0 4px 40px rgba(0,0,0,0.5)';
     } else {
-      nav.classList.remove('shadow-md');
-      nav.classList.remove('bg-cream/95');
-      nav.classList.add('bg-cream/80');
+      nav.style.background = 'rgba(7,5,14,0.85)';
+      nav.style.backdropFilter = 'blur(12px)';
+      nav.style.borderBottomColor = 'rgba(201,168,76,0.08)';
+      nav.style.boxShadow = 'none';
     }
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  // Scroll reveal
   var reveals = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    reveals.forEach(function (el) { io.observe(el); });
-  } else {
-    reveals.forEach(function (el) { el.classList.add('in-view'); });
-  }
+    var io = new IntersectionObserver(function(entries){ entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in-view'); io.unobserve(e.target); } }); }, { threshold: 0.1 });
+    reveals.forEach(function(el){ io.observe(el); });
+  } else { reveals.forEach(function(el){ el.classList.add('in-view'); }); }
 
-  // Footer year
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
-
 </body>
 </html>
