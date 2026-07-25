@@ -42,7 +42,7 @@
   @media (prefers-reduced-motion: no-preference) {
     html { scroll-behavior: smooth; }
   }
-  body { font-family: 'Inter', sans-serif; background-color: #FAF6EF; color: #2A211D; }
+  body { font-family: 'Inter', sans-serif; background-color: #07050E; color: #EDE8D5; }
 
   /* --- Image placeholder pattern --- */
   .ph {
@@ -91,21 +91,21 @@
     font-size: 0.7rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: rgba(42,33,29,0.5);
+    color: rgba(201,168,76,0.7);
     margin-bottom: 0.5rem;
   }
   .field-input, .field-select, .field-textarea {
     width: 100%;
     background: transparent;
     border: none;
-    border-bottom: 1px solid rgba(42,33,29,0.2);
+    border-bottom: 1px solid rgba(201,168,76,0.2);
     outline: none;
     padding: 0.55rem 0;
-    color: #2A211D;
+    color: #EDE8D5;
     font-size: 0.95rem;
     transition: border-color .2s ease;
   }
-  .field-input::placeholder, .field-textarea::placeholder { color: rgba(42,33,29,0.3); }
+  .field-input::placeholder, .field-textarea::placeholder { color: rgba(237,232,213,0.25); }
   .field-input:focus, .field-select:focus, .field-textarea:focus { border-bottom-color: #C9A227; }
   .field-select { appearance: none; padding-right: 1.5rem; cursor: pointer; }
   .field-textarea { resize: none; }
@@ -113,9 +113,9 @@
     cursor: pointer;
     padding: 0.5rem 1.25rem;
     border-radius: 9999px;
-    border: 1px solid rgba(42,33,29,0.2);
+    border: 1px solid rgba(201,168,76,0.25);
     font-size: 0.85rem;
-    color: rgba(42,33,29,0.7);
+    color: rgba(237,232,213,0.55);
     transition: all .2s ease;
   }
   input.peer:checked + .toggle-pill {
@@ -138,8 +138,8 @@
     <a href="index.html" class="flex items-center gap-3 group">
       <img src="assets\logo.jpeg" alt="Prathibha School of Dance logo" class="w-11 h-11 rounded-full object-cover">
       <span class="leading-tight">
-        <span class="block font-display text-lg sm:text-xl text-maroon font-semibold tracking-wide">Prathibha</span>
-        <span class="block text-[9px] sm:text-[10px] tracking-[0.25em] text-maroon/60 uppercase">School of Dance</span>
+        <span class="block font-display text-lg sm:text-xl text-gold font-semibold tracking-wide">Prathibha</span>
+        <span class="block text-[9px] sm:text-[10px] tracking-[0.25em] text-gold/50 uppercase">School of Dance</span>
       </span>
     </a>
 
@@ -196,12 +196,12 @@
     <div class="max-w-3xl mx-auto px-5 sm:px-8">
 
       <div class="reveal text-center mb-14">
-        <p class="text-maroon text-xs sm:text-sm tracking-[0.3em] uppercase font-medium mb-4">Join Us</p>
-        <h1 class="font-display text-4xl sm:text-5xl text-ink leading-tight mb-5">Registration &amp; Inquiry</h1>
-        <p class="font-accent italic text-ink/60 text-lg sm:text-xl max-w-xl mx-auto">Begin your journey with Prathibha School of Dance. Fill in the details below and our team will reach out to confirm enrolment.</p>
+        <p class="text-gold text-xs sm:text-sm tracking-[0.3em] uppercase font-medium mb-4">Join Us</p>
+        <h1 class="font-display text-4xl sm:text-5xl text-gold leading-tight mb-5">Registration &amp; Inquiry</h1>
+        <p class="font-accent italic text-gold/55 text-lg sm:text-xl max-w-xl mx-auto">Begin your journey with Prathibha School of Dance. Fill in the details below and our team will reach out to confirm enrolment.</p>
       </div>
 
-      <div class="reveal bg-white/50 border border-maroon/10 rounded-lg shadow-sm p-6 sm:p-10 lg:p-12">
+      <div class="reveal gold-card rounded-2xl bg-[#13102A] p-7 sm:p-10 lg:p-12">
         <form name="Dance_Registration" method="POST" action="thank-you.html" data-netlify="true" netlify-honeypot="bot-field" class="space-y-12">
           <input type="hidden" name="form-name" value="Dance_Registration" />
           <p class="hidden">

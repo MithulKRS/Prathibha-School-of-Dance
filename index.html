@@ -123,7 +123,7 @@
       <li><a href="#about" class="hover:text-gold transition-colors">About</a></li>
       <li><a href="#founder" class="hover:text-gold transition-colors">Founder</a></li>
       <li><a href="#gallery" class="hover:text-gold transition-colors">Gallery</a></li>
-      <li><a href="#reviews" class="hover:text-gold transition-colors">Reviews</a></li>
+      <li><a href="#feedback" class="hover:text-gold transition-colors">Feedback</a></li>
       <li><a href="#contact" class="hover:text-gold transition-colors">Contact</a></li>
     </ul>
 
@@ -639,172 +639,91 @@
   </div>
 </section>
 
-<!-- ═══════════════ REVIEWS ═══════════════ -->
-<section id="reviews" class="bg-obsidian temple-bg py-24 sm:py-32">
-  <div class="max-w-7xl mx-auto px-5 sm:px-8">
-    <div class="reveal text-center max-w-2xl mx-auto mb-16">
+<!-- ═══════════════ FEEDBACK ═══════════════ -->
+<section id="feedback" class="bg-obsidian temple-bg py-24 sm:py-32">
+  <div class="max-w-2xl mx-auto px-5 sm:px-8">
+
+    <div class="reveal text-center mb-14">
       <div class="flex items-center justify-center gap-3 mb-5">
         <span class="h-px w-8 bg-gold/60"></span>
-        <p class="text-gold text-xs tracking-[0.35em] uppercase font-medium">Student Reviews</p>
+        <p class="text-gold text-xs tracking-[0.35em] uppercase font-medium">Share Your Experience</p>
         <span class="h-px w-8 bg-gold/60"></span>
       </div>
-      <h2 class="font-display text-3xl sm:text-5xl text-ivory leading-tight mb-4">Voices from Our Community</h2>
-      <div class="flex items-center justify-center gap-2 mt-4">
-        <div class="flex gap-0.5">
-          <svg class="w-5 h-5 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-5 h-5 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-5 h-5 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-5 h-5 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-5 h-5 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-        </div>
-        <span class="text-gold font-display text-xl ml-1">4.8</span>
-        <span class="text-muted text-sm">average rating</span>
-      </div>
+      <h2 class="font-display text-3xl sm:text-5xl text-ivory leading-tight mb-5">Leave Us a Review</h2>
+      <p class="text-ivory/50 leading-relaxed font-accent italic text-lg">Your words help others discover Prathibha School of Dance. Keep it genuine and concise — the best reviews are short and heartfelt.</p>
     </div>
 
-    <div class="reveal grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+    <div class="reveal gold-card rounded-2xl bg-surface p-7 sm:p-10">
+      <form name="PSD_Feedback" method="POST" action="thank-you.html" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="PSD_Feedback">
+        <p class="hidden"><label>Don't fill this out: <input name="bot-field"></label></p>
 
-      <!-- Review 1 -->
-      <article class="review-card gold-card rounded-xl p-7 bg-surface">
-        <div class="flex gap-0.5 mb-4">
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        <!-- Name -->
+        <div class="mb-7">
+          <label for="fb_name" class="block text-[0.68rem] tracking-[0.17em] uppercase text-muted font-medium mb-2">Your Name</label>
+          <input id="fb_name" name="name" type="text" required maxlength="60" autocomplete="name"
+            class="w-full bg-transparent border-b border-gold/20 focus:border-gold outline-none py-2.5 text-ivory placeholder-ivory/20 text-sm transition-colors duration-200"
+            placeholder="e.g. Priya Menon">
         </div>
-        <p class="font-accent italic text-ivory/85 text-lg leading-relaxed mb-5">"My daughter performed her Arangetram after three years here. The stage presence, the mudras, the expression — the audience was left speechless."</p>
-        <p class="text-gold text-sm font-medium">Priya Menon</p>
-        <p class="text-muted text-xs mt-0.5">Parent · Bharatanatyam</p>
-      </article>
 
-      <!-- Review 2 -->
-      <article class="review-card gold-card rounded-xl p-7 bg-surface">
-        <div class="flex gap-0.5 mb-4">
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        <!-- Role -->
+        <div class="mb-7">
+          <label for="fb_role" class="block text-[0.68rem] tracking-[0.17em] uppercase text-muted font-medium mb-2">Your Role</label>
+          <div class="relative">
+            <select id="fb_role" name="role" required
+              class="w-full bg-transparent border-b border-gold/20 focus:border-gold outline-none py-2.5 text-ivory text-sm appearance-none cursor-pointer transition-colors duration-200"
+              style="color-scheme:dark;">
+              <option value="" disabled selected style="background:#13102A;">Select your role</option>
+              <option value="Parent" style="background:#13102A;">Parent</option>
+              <option value="Student" style="background:#13102A;">Student</option>
+              <option value="Former Student" style="background:#13102A;">Former Student</option>
+              <option value="Guardian" style="background:#13102A;">Guardian</option>
+              <option value="Family Member" style="background:#13102A;">Family Member</option>
+            </select>
+            <svg class="pointer-events-none absolute right-0 bottom-3 w-4 h-4 text-gold/50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
         </div>
-        <p class="font-accent italic text-ivory/85 text-lg leading-relaxed mb-5">"Prathibha doesn't just teach steps — it teaches the soul of the dance. My daughter's posture, discipline, and confidence changed completely within months."</p>
-        <p class="text-gold text-sm font-medium">Arun Sharma</p>
-        <p class="text-muted text-xs mt-0.5">Parent · Kuchipudi</p>
-      </article>
 
-      <!-- Review 3 -->
-      <article class="review-card gold-card rounded-xl p-7 bg-surface">
-        <div class="flex gap-0.5 mb-4">
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        <!-- Star Rating -->
+        <div class="mb-8">
+          <span class="block text-[0.68rem] tracking-[0.17em] uppercase text-muted font-medium mb-3">Rating</span>
+          <div class="flex gap-2" role="radiogroup" aria-label="Star rating">
+           <input type="radio" id="star1" name="rating" value="1 star" class="sr-only" required>
+            <label for="star1" class="star-label cursor-pointer text-3xl text-gold/25 transition-colors" data-value="1" title="1 star">&#9733;</label>
+
+            <input type="radio" id="star2" name="rating" value="2 stars" class="sr-only">
+            <label for="star2" class="star-label cursor-pointer text-3xl text-gold/25 transition-colors" data-value="2" title="2 stars">&#9733;</label>
+
+            <input type="radio" id="star3" name="rating" value="3 stars" class="sr-only">
+            <label for="star3" class="star-label cursor-pointer text-3xl text-gold/25 transition-colors" data-value="3" title="3 stars">&#9733;</label>
+
+            <input type="radio" id="star4" name="rating" value="4 stars" class="sr-only">
+            <label for="star4" class="star-label cursor-pointer text-3xl text-gold/25 transition-colors" data-value="4" title="4 stars">&#9733;</label>
+
+            <input type="radio" id="star5" name="rating" value="5 stars" class="sr-only">
+            <label for="star5" class="star-label cursor-pointer text-3xl text-gold/25 transition-colors" data-value="5" title="5 stars">&#9733;</label>
+          </div>
         </div>
-        <p class="font-accent italic text-ivory/85 text-lg leading-relaxed mb-5">"Rajasree ma'am carries this art in her heart. You feel it in every class. No school in Kuwait comes close to this level of classical training."</p>
-        <p class="text-gold text-sm font-medium">Deepa Nair</p>
-        <p class="text-muted text-xs mt-0.5">Parent · Mohiniyattam</p>
-      </article>
 
-      <!-- Review 4 -->
-      <article class="review-card gold-card rounded-xl p-7 bg-surface">
-        <div class="flex gap-0.5 mb-4">
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        <!-- Review Text -->
+        <div class="mb-8">
+          <div class="flex items-baseline justify-between mb-2">
+            <label for="fb_review" class="block text-[0.68rem] tracking-[0.17em] uppercase text-muted font-medium">Your Review</label>
+            <span id="word-counter" class="text-[0.65rem] text-muted tabular-nums">0 / 60 words</span>
+          </div>
+          <textarea id="fb_review" name="review" rows="4" required
+            class="w-full bg-transparent border-b border-gold/20 focus:border-gold outline-none py-2.5 text-ivory placeholder-ivory/20 text-sm resize-none transition-colors duration-200"
+            placeholder="Tell us about your experience in a few honest words..."></textarea>
+          <p class="text-[0.65rem] text-muted mt-1.5">Maximum 60 words. Short, genuine reviews work best.</p>
         </div>
-        <p class="font-accent italic text-ivory/85 text-lg leading-relaxed mb-5">"Three years of Kuchipudi and my daughter still counts down the hours to her next class. That says everything about this school."</p>
-        <p class="text-gold text-sm font-medium">Suresh Pillai</p>
-        <p class="text-muted text-xs mt-0.5">Parent · Kuchipudi</p>
-      </article>
 
-      <!-- Review 5 -->
-      <article class="review-card gold-card rounded-xl p-7 bg-surface">
-        <div class="flex gap-0.5 mb-4">
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-        </div>
-        <p class="font-accent italic text-ivory/85 text-lg leading-relaxed mb-5">"The recitals staged by Prathibha are breathtaking productions. You see months of devotion crystallised into something truly beautiful."</p>
-        <p class="text-gold text-sm font-medium">Rekha Krishnan</p>
-        <p class="text-muted text-xs mt-0.5">Parent · Bharatanatyam</p>
-      </article>
-
-      <!-- Review 6 -->
-      <article class="review-card gold-card rounded-xl p-7 bg-surface">
-        <div class="flex gap-0.5 mb-4">
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-        </div>
-        <p class="font-accent italic text-ivory/85 text-lg leading-relaxed mb-5">"From a shy seven-year-old to a confident performer who commands the stage. Prathibha School of Dance made that possible."</p>
-        <p class="text-gold text-sm font-medium">Kavitha Suresh</p>
-        <p class="text-muted text-xs mt-0.5">Parent · Semi-Classical</p>
-      </article>
-
-      <!-- Review 7 -->
-      <article class="review-card gold-card rounded-xl p-7 bg-surface">
-        <div class="flex gap-0.5 mb-4">
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-        </div>
-        <p class="font-accent italic text-ivory/85 text-lg leading-relaxed mb-5">"The attention to classical technique is exceptional. Mudras, abhinaya, footwork — every detail is taught with precision and deep care."</p>
-        <p class="text-gold text-sm font-medium">Ganesh Iyer</p>
-        <p class="text-muted text-xs mt-0.5">Parent · Bharatanatyam</p>
-      </article>
-
-      <!-- Review 8 -->
-      <article class="review-card gold-card rounded-xl p-7 bg-surface">
-        <div class="flex gap-0.5 mb-4">
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-        </div>
-        <p class="font-accent italic text-ivory/85 text-lg leading-relaxed mb-5">"A rare combination of warmth and rigour. Children are pushed to excel but always with joy. This is what real classical training feels like."</p>
-        <p class="text-gold text-sm font-medium">Anitha Raju</p>
-        <p class="text-muted text-xs mt-0.5">Parent · Mohiniyattam</p>
-      </article>
-
-      <!-- Review 9 -->
-      <article class="review-card gold-card rounded-xl p-7 bg-surface">
-        <div class="flex gap-0.5 mb-4">
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-        </div>
-        <p class="font-accent italic text-ivory/85 text-lg leading-relaxed mb-5">"I was moved to tears at my niece's first recital. The grace and expressiveness at such a young age is simply extraordinary."</p>
-        <p class="text-gold text-sm font-medium">Meera Ramachandran</p>
-        <p class="text-muted text-xs mt-0.5">Family Member · Bharatanatyam</p>
-      </article>
-
-      <!-- Review 10 -->
-      <article class="review-card gold-card rounded-xl p-7 bg-surface">
-        <div class="flex gap-0.5 mb-4">
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-          <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-        </div>
-        <p class="font-accent italic text-ivory/85 text-lg leading-relaxed mb-5">"Prathibha is an institution. It preserves a living tradition and gives children a gift — poise, culture, and beauty — that stays with them forever."</p>
-        <p class="text-gold text-sm font-medium">Vijay Krishnamurthy</p>
-        <p class="text-muted text-xs mt-0.5">Parent · Kuchipudi</p>
-      </article>
-
+        <button type="submit"
+          class="w-full bg-gold text-obsidian font-semibold tracking-widest text-sm uppercase py-4 rounded-full hover:bg-gold-bright transition-colors duration-300">
+          Submit Review
+        </button>
+      </form>
     </div>
+
   </div>
 </section>
 
@@ -943,6 +862,51 @@
 
   // ─── Year ───
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ─── Feedback form: word counter ───
+  var fbTextarea = document.getElementById('fb_review');
+  var wordCounter = document.getElementById('word-counter');
+  if (fbTextarea && wordCounter) {
+    var MAX_WORDS = 60;
+    fbTextarea.addEventListener('input', function () {
+      var words = this.value.trim() === '' ? [] : this.value.trim().split(/\s+/);
+      if (words.length > MAX_WORDS) {
+        // trim to limit
+        this.value = words.slice(0, MAX_WORDS).join(' ');
+        words = words.slice(0, MAX_WORDS);
+      }
+      var count = words.length;
+      wordCounter.textContent = count + ' / ' + MAX_WORDS + ' words';
+      wordCounter.style.color = count >= MAX_WORDS ? '#C9A84C' : '';
+    });
+  }
+
+  // ─── Feedback form: star hover cascade (fill stars to the left of hovered) ───
+  // ─── Feedback form: star rating (fill 1 through selected) ───
+  (function () {
+    var labels = document.querySelectorAll('.star-label');
+    var selectedValue = 0;
+
+    function setStars(upTo) {
+      labels.forEach(function (l) {
+        var v = parseInt(l.getAttribute('data-value'), 10);
+        l.style.color = v <= upTo ? '#C9A84C' : 'rgba(201,168,76,0.25)';
+      });
+    }
+
+    labels.forEach(function (lbl) {
+      lbl.addEventListener('mouseenter', function () {
+        setStars(parseInt(this.getAttribute('data-value'), 10));
+      });
+      lbl.addEventListener('mouseleave', function () {
+        setStars(selectedValue);
+      });
+      lbl.addEventListener('click', function () {
+        selectedValue = parseInt(this.getAttribute('data-value'), 10);
+        setStars(selectedValue);
+      });
+    });
+  })();
 </script>
 
 </body>
