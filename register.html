@@ -152,8 +152,12 @@
     </div>
 
     <div class="gold-card rounded-2xl bg-surface p-7 sm:p-10 shadow-2xl">
-      <form action="thankyou.html" method="GET" class="space-y-8">
+      <!-- NETLIFY ENABLED FORM -->
+      <form name="registration" method="POST" data-netlify="true" action="thankyou.html" class="space-y-8">
         
+        <!-- Netlify hidden form identifier -->
+        <input type="hidden" name="form-name" value="registration" />
+
         <!-- Student Information Fieldset -->
         <fieldset class="border-b border-gold/15 pb-8">
           <legend class="font-display text-2xl text-gold mb-6">Student Information</legend>
