@@ -25,6 +25,8 @@
           gold: { DEFAULT: '#C9A84C', bright: '#F0CC66', dim: '#6B5820', glow: 'rgba(201,168,76,0.12)' },
           teal: { DEFAULT: '#1B7A82', light: '#22A5B0' },
           saffron: '#C8620A',
+          maroon: { DEFAULT: '#800020', dark: '#5C0016' },
+          cream: '#FAF6EF',
         },
         fontFamily: {
           display: ['"Playfair Display"', 'serif'],
@@ -103,9 +105,9 @@
 </style>
 </head>
 
-<body class="bg-obsidian text-ivory antialiased">
+<body class="bg-maroon text-gold antialiased">
 
-<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-gold focus:text-obsidian focus:px-4 focus:py-2 focus:rounded-md">Skip to main content</a>
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-gold focus:text-maroon focus:px-4 focus:py-2 focus:rounded-md">Skip to main content</a>
 
 <!-- ═══════════════ NAVIGATION ═══════════════ -->
 <header id="site-nav" class="fixed top-0 inset-x-0 z-50 border-b border-transparent">
@@ -131,14 +133,14 @@
       Register Now
     </a>
 
-    <button id="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" class="md:hidden text-gold p-2 -mr-2">
+    <button id="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" class="md:hidden text-maroon p-2 -mr-2">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" class="w-7 h-7"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
     </button>
   </nav> 
 
   
     <!-- Mobile menu overlay -->
-  <div id="mobile-menu" class="hidden md:hidden fixed inset-0 top-20 bg-[#07050E] z-[60] h-[calc(100vh-5rem)] overflow-y-auto">
+  <div id="mobile-menu" class="hidden md:hidden fixed inset-0 top-20 bg-[#FAF6EF] z-[60] h-[calc(100vh-5rem)] overflow-y-auto">
     <div class="flex flex-col min-h-full px-8 pt-8 pb-12">
       <!-- Menu Links -->
       <ul class="flex flex-col gap-8 font-display text-4xl text-maroon mt-4">
@@ -157,7 +159,7 @@
     </div>
 
     <!-- Close Button -->
-    <button id="menu-close-btn" type="button" aria-label="Close menu" class="absolute top-6 right-6 text-gold p-2">
+    <button id="menu-close-btn" type="button" aria-label="Close menu" class="absolute top-6 right-6 text-maroon p-2">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" class="w-7 h-7"><path d="M6 6l12 12M18 6L6 18"/></svg>
     </button>
   </div>
@@ -638,6 +640,8 @@
     </div>
   </div>
 </section>
+
+
 <!-- ═══════════════ REVIEWS ═══════════════ -->
 <section id="reviews" class="bg-obsidian temple-bg py-24 sm:py-32">
   <div class="max-w-7xl mx-auto px-5 sm:px-8">
@@ -923,6 +927,7 @@
 
   </div>
 </section>
+
 </main>
 
 <!-- ═══════════════ CONTACT / FOOTER ═══════════════ -->

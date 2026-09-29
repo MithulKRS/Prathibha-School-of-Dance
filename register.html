@@ -3,15 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Register | Prathibha School of Dance — Kuwait</title>
-<meta name="description" content="Register for classes at Prathibha School of Dance, Kuwait. Enrol in Bharatanatyam, Kuchipudi, Mohiniyattam, or semi-classical dance training.">
-<meta name="theme-color" content="#800020">
-<link rel="icon" type="image/jpeg" href="assets\icon.png">
+<title>Register | Prathibha School of Dance</title>
+<meta name="theme-color" content="#C9A84C">
+<link rel="icon" type="image/jpeg" href="assets/icon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = {
@@ -24,8 +22,6 @@
           ivory: '#EDE8D5',
           muted: '#8A7E65',
           gold: { DEFAULT: '#C9A84C', bright: '#F0CC66', dim: '#6B5820', glow: 'rgba(201,168,76,0.12)' },
-          teal: { DEFAULT: '#1B7A82', light: '#22A5B0' },
-          saffron: '#C8620A',
         },
         fontFamily: {
           display: ['"Playfair Display"', 'serif'],
@@ -38,452 +34,275 @@
 </script>
 
 <style>
-  html { scroll-behavior: auto; }
-  @media (prefers-reduced-motion: no-preference) {
-    html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background-color: #07050E; color: #EDE8D5; overflow-x: hidden; }
+  .temple-bg {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M30 3L57 30L30 57L3 30Z' fill='none' stroke='rgba(201%2C168%2C76%2C0.06)' stroke-width='0.7'/%3E%3Ccircle cx='30' cy='30' r='5' fill='none' stroke='rgba(201%2C168%2C76%2C0.05)' stroke-width='0.6'/%3E%3C/svg%3E");
+    background-size: 60px 60px;
   }
-  body { font-family: 'Inter', sans-serif; background-color: #07050E; color: #EDE8D5; }
-
-  /* --- Image placeholder pattern --- */
-  .ph {
-    background-color: #13102A;
-    background-image: repeating-linear-gradient(135deg, rgba(201,168,76,0.04) 0px, rgba(201,168,76,0.04) 1px, transparent 1px, transparent 14px);
-  }
-
-  /* --- Scroll reveal --- */
-  .reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1); }
-  .reveal.in-view { opacity: 1; transform: translateY(0); }
-  @media (prefers-reduced-motion: reduce) { .reveal, .reveal.in-view { opacity: 1 !important; transform: none !important; transition: none !important; } }
-
-
-  /* --- Hero load animation --- */
-  @keyframes fadeUp { from { opacity: 0; transform: translateY(22px);} to { opacity: 1; transform: translateY(0);} }
-  .animate-fade-up { animation: fadeUp 1s cubic-bezier(.16,1,.3,1) both; }
-
-  @media (prefers-reduced-motion: reduce) {
-    .reveal, .reveal.in-view { opacity: 1 !important; transform: none !important; transition: none !important; }
-    .animate-fade-up { animation: none !important; opacity: 1 !important; transform: none !important; }
-  }
-
-  /* --- Drop cap for founder bio --- */
-  .drop-cap::first-letter {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-size: 4.2rem;
-    line-height: 0.78;
-    float: left;
-    padding-right: 0.6rem;
-    padding-top: 0.4rem;
-    color: #800020;
-  }
-
-  /* Focus visibility */
-  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
-    outline: 2px solid #C9A227;
-    outline-offset: 3px;
-  }
-
-  ::selection { background: #C9A227; color: #2A211D; }
-
-  /* --- Form field styling --- */
+  .gold-card { position: relative; }
+  .gold-card::before { content: ''; position: absolute; inset: 0; border-radius: inherit; border: 1px solid rgba(201,168,76,0.18); pointer-events: none; z-index: 1; }
+  .gold-card::after { content: ''; position: absolute; top: 0; left: 20%; right: 20%; height: 1px; background: linear-gradient(90deg, transparent, #C9A84C, transparent); z-index: 2; }
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 2px solid #C9A84C; outline-offset: 3px; }
+  ::selection { background: #C9A84C; color: #07050E; }
+  #site-nav { background: #07050E; border-bottom: 1px solid rgba(201,168,76,0.15); }
+  
+  /* Form Field Custom Styles */
   .field-label {
     display: block;
-    font-size: 0.7rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: rgba(201,168,76,0.7);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #C9A84C;
     margin-bottom: 0.5rem;
   }
   .field-input, .field-select, .field-textarea {
     width: 100%;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid rgba(201,168,76,0.2);
-    outline: none;
-    padding: 0.55rem 0;
+    background-color: #07050E;
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
     color: #EDE8D5;
-    font-size: 0.95rem;
-    transition: border-color .2s ease;
+    transition: border-color 0.2s, box-shadow 0.2s;
   }
-  .field-input::placeholder, .field-textarea::placeholder { color: rgba(237,232,213,0.25); }
-  .field-input:focus, .field-select:focus, .field-textarea:focus { border-bottom-color: #C9A227; }
-  .field-select { appearance: none; padding-right: 1.5rem; cursor: pointer; }
-  .field-textarea { resize: none; }
+  .field-input::placeholder, .field-textarea::placeholder {
+    color: rgba(237, 232, 213, 0.3);
+  }
+  .field-input:focus, .field-select:focus, .field-textarea:focus {
+    outline: none;
+    border-color: #C9A84C;
+    box-shadow: 0 0 0 1px #C9A84C;
+  }
+  .field-select option {
+    background-color: #07050E;
+    color: #EDE8D5;
+  }
+
+  /* Toggle Pills for Working / Housewife */
   .toggle-pill {
     cursor: pointer;
+    display: inline-flex;
+    align-items: center;
     padding: 0.5rem 1.25rem;
-    border-radius: 9999px;
-    border: 1px solid rgba(201,168,76,0.25);
-    font-size: 0.85rem;
-    color: rgba(237,232,213,0.55);
-    transition: all .2s ease;
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    color: rgba(237, 232, 213, 0.8);
+    transition: all 0.2s ease;
+    user-select: none;
   }
-  input.peer:checked + .toggle-pill {
-    background-color: #800020;
-    border-color: #800020;
-    color: #FAF6EF;
+  input[type="radio"]:checked + .toggle-pill {
+    background-color: #C9A84C;
+    color: #07050E;
+    border-color: #C9A84C;
+    font-weight: 600;
   }
+
+  ::-webkit-calendar-picker-indicator { filter: invert(1) sepia(1) saturate(5) hue-rotate(350deg); cursor: pointer; }
 </style>
 </head>
 
 <body class="bg-obsidian text-ivory antialiased">
 
-<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-maroon focus:text-cream focus:px-4 focus:py-2 focus:rounded-md">Skip to main content</a>
-
-<!-- ============ NAVIGATION ============ -->
-<header id="site-nav" class="fixed top-0 inset-x-0 z-50 bg-cream/80 backdrop-blur-md border-b border-maroon/10 transition-all duration-300">
+<!-- NAVIGATION -->
+<header id="site-nav" class="fixed top-0 inset-x-0 z-50">
   <nav class="max-w-7xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between" aria-label="Primary">
-
-    <!-- Logo -->
     <a href="index.html" class="flex items-center gap-3 group">
-      <img src="assets\logo.jpeg" alt="Prathibha School of Dance logo" class="w-11 h-11 rounded-full object-cover">
+      <img src="assets/logo.jpeg" alt="Prathibha School of Dance logo" class="w-11 h-11 rounded-full object-cover ring-1 ring-gold/30 group-hover:ring-gold/60 transition-all">
       <span class="leading-tight">
         <span class="block font-display text-lg sm:text-xl text-gold font-semibold tracking-wide">Prathibha</span>
-        <span class="block text-[9px] sm:text-[10px] tracking-[0.25em] text-gold/50 uppercase">School of Dance</span>
+        <span class="block text-[9px] sm:text-[10px] tracking-[0.28em] text-gold/50 uppercase">School of Dance</span>
       </span>
     </a>
 
-    <!-- Desktop links -->
-    <ul class="hidden md:flex items-center gap-10 font-body text-sm tracking-wide text-ink/80">
-      <li><a href="index.html#about" class="hover:text-maroon transition-colors">About</a></li>
-      <li><a href="index.html#founder" class="hover:text-maroon transition-colors">Founder</a></li>
-      <li><a href="index.html#gallery" class="hover:text-maroon transition-colors">Gallery</a></li>
-      <li><a href="#contact" class="hover:text-maroon transition-colors">Contact</a></li>
+    <ul class="hidden md:flex items-center gap-9 font-body text-sm tracking-wide text-ivory/70">
+      <li><a href="index.html#about" class="hover:text-gold transition-colors">About</a></li>
+      <li><a href="index.html#founder" class="hover:text-gold transition-colors">Founder</a></li>
+      <li><a href="index.html#gallery" class="hover:text-gold transition-colors">Gallery</a></li>
+      <li><a href="index.html#feedback" class="hover:text-gold transition-colors">Feedback</a></li>
+      <li><a href="index.html#contact" class="hover:text-gold transition-colors">Contact</a></li>
     </ul>
 
-    <div class="hidden md:block">
-      <a href="#registration" class="inline-flex items-center gap-2 bg-maroon text-cream text-sm font-medium tracking-wide px-6 py-2.5 rounded-full hover:bg-maroon-dark transition-colors">
-        Register Now
-      </a>
-    </div>
-
-    <!-- Mobile menu button -->
-    <button id="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" class="md:hidden text-maroon p-2 -mr-2">
+    <button id="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" class="md:hidden text-gold p-2 -mr-2">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" class="w-7 h-7"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
     </button>
-  </nav>
+  </nav> 
 
   <!-- Mobile menu overlay -->
-  <div id="mobile-menu" class="hidden md:hidden fixed inset-0 top-20 bg-[#FAF6EF] z-[60] h-[calc(100vh-5rem)] overflow-y-auto">
-    <div class="flex flex-col min-h-full px-8 pt-8 pb-12">
-      <!-- Menu Links -->
-      <ul class="flex flex-col gap-8 font-display text-4xl text-maroon mt-4">
-        <li><a href="index.html#about" class="block w-full">About</a></li>
-        <li><a href="index.html#founder" class="block w-full">Founder</a></li>
-        <li><a href="index.html#gallery" class="block w-full">Gallery</a></li>
-        <li><a href="#contact" class="block w-full">Contact</a></li>
+  <div id="mobile-menu" class="hidden fixed inset-0 top-20 bg-[#07050E] z-[60] h-[calc(100vh-5rem)] overflow-y-auto">
+    <div class="flex flex-col min-h-full px-8 pt-8 pb-12 relative">
+      <ul class="flex flex-col gap-8 font-display text-4xl text-gold mt-4">
+        <li><a href="index.html#about" class="block w-full mobile-link">About</a></li>
+        <li><a href="index.html#founder" class="block w-full mobile-link">Founder</a></li>
+        <li><a href="index.html#gallery" class="block w-full mobile-link">Gallery</a></li>
+        <li><a href="index.html#contact" class="block w-full mobile-link">Contact</a></li>
       </ul>
-      
-      <!-- Register Button -->
-      <div class="mt-auto pt-10">
-        <a href="#registration" class="flex justify-center items-center w-full bg-maroon text-cream text-lg font-medium tracking-wide py-4 rounded-full shadow-lg hover:bg-maroon-dark transition-colors">
-          Register Now
-        </a>
-      </div>
+      <button id="menu-close-btn" type="button" aria-label="Close menu" class="absolute top-0 right-4 text-gold p-2">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" class="w-7 h-7"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
     </div>
-
-    <!-- Close Button -->
-    <button id="menu-close-btn" type="button" aria-label="Close menu" class="absolute top-6 right-6 text-maroon p-2 bg-[#FAF6EF] rounded-full border border-maroon/10 shadow-sm">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="w-8 h-8"><path d="M6 6l12 12M18 6L6 18"/></svg>
-    </button>
   </div>
 </header>
 
-<main id="main">
+<!-- REGISTRATION FORM -->
+<main class="pt-32 pb-24 min-h-screen flex items-center justify-center temple-bg px-5 sm:px-8">
+  <div class="w-full max-w-3xl">
+    
+    <div class="text-center mb-10">
+      <h1 class="font-display text-3xl sm:text-5xl text-ivory leading-tight mb-4">Join Our Academy</h1>
+      <p class="text-ivory/60 font-accent italic text-xl">Begin your classical dance journey with us.</p>
+    </div>
 
-  <!-- ============ REGISTRATION & INQUIRY ============ -->
-  <section id="registration" class="pt-32 sm:pt-40 pb-24 sm:pb-32 bg-obsidian relative overflow-hidden">
-    <div class="max-w-3xl mx-auto px-5 sm:px-8">
-
-      <div class="reveal text-center mb-14">
-        <p class="text-gold text-xs sm:text-sm tracking-[0.3em] uppercase font-medium mb-4">Join Us</p>
-        <h1 class="font-display text-4xl sm:text-5xl text-gold leading-tight mb-5">Registration &amp; Inquiry</h1>
-        <p class="font-accent italic text-gold/55 text-lg sm:text-xl max-w-xl mx-auto">Begin your journey with Prathibha School of Dance. Fill in the details below and our team will reach out to confirm enrolment.</p>
-      </div>
-
-      <div class="reveal gold-card rounded-2xl bg-[#13102A] p-7 sm:p-10 lg:p-12">
-        <form name="Dance_Registration" method="POST" action="thank-you.html" data-netlify="true" netlify-honeypot="bot-field" class="space-y-12">
-          <input type="hidden" name="form-name" value="Dance_Registration" />
-          <p class="hidden">
-            <label>Don't fill this out if you're human: <input name="bot-field"></label>
-          </p>
-
-          <!-- Student Information -->
-          <fieldset>
-            <legend class="font-display text-xl text-maroon mb-6">Student Information</legend>
-            <div class="grid sm:grid-cols-2 gap-x-8 gap-y-6">
-              <div class="sm:col-span-2">
-                <label for="student_name" class="field-label">Name of the Student</label>
-                <input id="student_name" name="student_name" type="text" required autocomplete="name" class="field-input" placeholder="Full name of the student">
-              </div>
-
-              <div>
-                <label for="student_age" class="field-label">Age of the Student</label>
-                <input id="student_age" name="student_age" type="number" min="2" max="80" required class="field-input" placeholder="e.g. 9">
-              </div>
-
-              <div>
-                <label for="academic_level" class="field-label">Academic Level</label>
-                <input id="academic_level" name="academic_level" type="text" class="field-input" placeholder="e.g. Grade 5, High School">
-              </div>
-
-              <div class="sm:col-span-2">
-                <label for="school_name" class="field-label">School Name</label>
-                <input id="school_name" name="school_name" type="text" class="field-input" placeholder="Current school of the student">
-              </div>
+    <div class="gold-card rounded-2xl bg-surface p-7 sm:p-10 shadow-2xl">
+      <form action="thankyou.html" method="GET" class="space-y-8">
+        
+        <!-- Student Information Fieldset -->
+        <fieldset class="border-b border-gold/15 pb-8">
+          <legend class="font-display text-2xl text-gold mb-6">Student Information</legend>
+          <div class="grid sm:grid-cols-2 gap-x-8 gap-y-6">
+            <div>
+              <label for="student_name" class="field-label">Name of the Student</label>
+              <input id="student_name" name="student_name" type="text" required autocomplete="name" class="field-input" placeholder="Full name of the student">
             </div>
-          </fieldset>
-
-          <!-- Parent / Guardian Information -->
-          <fieldset>
-            <legend class="font-display text-xl text-maroon mb-6">Parent / Guardian Information</legend>
-            <div class="grid sm:grid-cols-2 gap-x-8 gap-y-6">
-              <div class="sm:col-span-2">
-                <label for="parent_name" class="field-label">Parent / Guardian Name</label>
-                <input id="parent_name" name="parent_name" type="text" required autocomplete="name" class="field-input" placeholder="Full name of parent or guardian">
-              </div>
-
-              <div class="sm:col-span-2">
-                <label for="home_address" class="field-label">Home Address (Kuwait)</label>
-                <input id="home_address" name="home_address" type="text" autocomplete="street-address" class="field-input" placeholder="Block, street, building, area">
-              </div>
-
-              <div>
-                <span class="field-label">Working Woman / Housewife</span>
-                <div class="flex gap-3 mt-1">
-                  <input type="radio" id="status_working" name="parent_status" value="Working" class="peer sr-only">
-                  <label for="status_working" class="toggle-pill peer">Working</label>
-
-                  <input type="radio" id="status_housewife" name="parent_status" value="Housewife" class="peer sr-only">
-                  <label for="status_housewife" class="toggle-pill peer">Housewife</label>
-                </div>
-              </div>
-
-              <div>
-                <label for="company_name" class="field-label">If Working, Company Name</label>
-                <input id="company_name" name="company_name" type="text" class="field-input" placeholder="Leave blank if not applicable">
-              </div>
+            <div>
+              <label for="student_age" class="field-label">Age of the Student</label>
+              <input id="student_age" name="student_age" type="number" min="2" max="80" required class="field-input" placeholder="e.g. 9">
             </div>
-          </fieldset>
-
-          <!-- Class Preference -->
-          <fieldset>
-            <legend class="font-display text-xl text-maroon mb-6">Class Preference</legend>
-            <div class="grid sm:grid-cols-2 gap-x-8 gap-y-6">
-              <div class="relative">
-                <label for="location" class="field-label">Location Intend to Join</label>
-                <select id="location" name="location" required class="field-select">
-                  <option value="" disabled selected>Select a location/Online class</option>
-                  <option value="Mangaf">Mangaf</option>
-                  <option value="Salmiya">Salmiya</option>
-                  <option value="Abbasiya">Abbasiya</option>
-                  <option value="Online">Online</option>
-                </select>
-                <svg class="pointer-events-none absolute right-0 bottom-3 w-4 h-4 text-ink/40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 9l6 6 6-6"/></svg>
-              </div>
-
-              <div>
-                <label for="date_of_joining" class="field-label">Date of Joining</label>
-                <input id="date_of_joining" name="date_of_joining" type="date" required class="field-input">
-              </div>
-
-              <div class="relative">
-                <label for="dance_form" class="field-label">Dance Form Intend to Join</label>
-                <select id="dance_form" name="dance_form" required class="field-select">
-                  <option value="" disabled selected>Select a dance form</option>
-                  <option value="Bharatanatyam">Bharatanatyam</option>
-                  <option value="Kuchipudi">Kuchipudi</option>
-                  <option value="Mohiniyattam">Mohiniyattam</option>
-                  <option value="Semiclassical">Semiclassical</option>
-                </select>
-                <svg class="pointer-events-none absolute right-0 bottom-3 w-4 h-4 text-ink/40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 9l6 6 6-6"/></svg>
-              </div>
-
-              <div>
-                <label for="prior_level" class="field-label">Level / Prior Experience, if Any</label>
-                <input id="prior_level" name="prior_level" type="text" class="field-input" placeholder="e.g. Beginner, Grade 3, Arangetram completed">
-              </div>
+            <div>
+              <label for="academic_level" class="field-label">Academic Level</label>
+              <input id="academic_level" name="academic_level" type="text" class="field-input" placeholder="e.g. Grade 5, High School">
             </div>
-          </fieldset>
-
-          <!-- Contact Details -->
-          <fieldset>
-            <legend class="font-display text-xl text-maroon mb-6">Contact Details</legend>
-            <div class="grid sm:grid-cols-2 gap-x-8 gap-y-6">
-              <div>
-                <label for="contact_number" class="field-label">Contact Number</label>
-                <input id="contact_number" name="contact_number" type="tel" required autocomplete="tel" class="field-input" placeholder="+965 XXXX XXXX">
-              </div>
-
-              <div>
-                <label for="email" class="field-label">Email</label>
-                <input id="email" name="email" type="email" required autocomplete="email" class="field-input" placeholder="you@example.com">
-              </div>
+            <div class="sm:col-span-2">
+              <label for="school_name" class="field-label">School Name</label>
+              <input id="school_name" name="school_name" type="text" class="field-input" placeholder="Current school of the student">
             </div>
-          </fieldset>
-
-          <!-- Message -->
-          <div>
-            <label for="message" class="field-label">Message</label>
-            <textarea id="message" name="message" rows="4" class="field-textarea" placeholder="Anything else you'd like us to know"></textarea>
           </div>
+        </fieldset>
 
-          <button type="submit" class="w-full bg-gold text-maroon-dark font-semibold tracking-wide py-3.5 rounded-full hover:bg-gold-light transition-colors">
+        <!-- Parent / Guardian Information Fieldset -->
+        <fieldset class="border-b border-gold/15 pb-8">
+          <legend class="font-display text-2xl text-gold mb-6">Parent / Guardian Information</legend>
+          <div class="grid sm:grid-cols-2 gap-x-8 gap-y-6">
+            <div class="sm:col-span-2">
+              <label for="parent_name" class="field-label">Parent / Guardian Name</label>
+              <input id="parent_name" name="parent_name" type="text" required autocomplete="name" class="field-input" placeholder="Full name of parent or guardian">
+            </div>
+            <div class="sm:col-span-2">
+              <label for="home_address" class="field-label">Home Address (Kuwait)</label>
+              <input id="home_address" name="home_address" type="text" autocomplete="street-address" class="field-input" placeholder="Block, street, building, area">
+            </div>
+            <div>
+              <span class="field-label">Working Woman / Housewife</span>
+              <div class="flex flex-wrap gap-3 mt-1">
+                <input type="radio" id="status_working" name="parent_status" value="Working" class="peer sr-only">
+                <label for="status_working" class="toggle-pill">Working</label>
+                
+                <input type="radio" id="status_housewife" name="parent_status" value="Housewife" class="peer sr-only">
+                <label for="status_housewife" class="toggle-pill">Housewife</label>
+              </div>
+            </div>
+            <div>
+              <label for="company_name" class="field-label">If Working, Company Name</label>
+              <input id="company_name" name="company_name" type="text" class="field-input" placeholder="Leave blank if not applicable">
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Class Preference Fieldset -->
+        <fieldset class="border-b border-gold/15 pb-8">
+          <legend class="font-display text-2xl text-gold mb-6">Class Preference</legend>
+          <div class="grid sm:grid-cols-2 gap-x-8 gap-y-6">
+            <div>
+              <label for="location" class="field-label">Location Intend to Join</label>
+              <select id="location" name="location" required class="field-select">
+                <option value="" disabled selected>Select a location / online class</option>
+                <option value="Mangaf">Mangaf</option>
+                <option value="Salmiya">Salmiya</option>
+                <option value="Abbasiya">Abbasiya</option>
+                <option value="Online">Online</option>
+              </select>
+            </div>
+            <div>
+              <label for="date_of_joining" class="field-label">Date of Joining</label>
+              <input id="date_of_joining" name="date_of_joining" type="date" required class="field-input">
+            </div>
+            <div>
+              <label for="dance_form" class="field-label">Dance Form Intend to Join</label>
+              <select id="dance_form" name="dance_form" required class="field-select">
+                <option value="" disabled selected>Select a dance form</option>
+                <option value="Bharatanatyam">Bharatanatyam</option>
+                <option value="Kuchipudi">Kuchipudi</option>
+                <option value="Mohiniyattam">Mohiniyattam</option>
+                <option value="Semiclassical">Semiclassical</option>
+              </select>
+            </div>
+            <div>
+              <label for="prior_level" class="field-label">Level / Prior Experience, if Any</label>
+              <input id="prior_level" name="prior_level" type="text" class="field-input" placeholder="e.g. Beginner, Grade 3, Arangetram completed">
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Contact Details Fieldset -->
+        <fieldset class="border-b border-gold/15 pb-8">
+          <legend class="font-display text-2xl text-gold mb-6">Contact Details</legend>
+          <div class="grid sm:grid-cols-2 gap-x-8 gap-y-6">
+            <div>
+              <label for="contact_number" class="field-label">Contact Number</label>
+              <input id="contact_number" name="contact_number" type="tel" required autocomplete="tel" class="field-input" placeholder="+965 XXXX XXXX">
+            </div>
+            <div>
+              <label for="email" class="field-label">Email</label>
+              <input id="email" name="email" type="email" required autocomplete="email" class="field-input" placeholder="you@example.com">
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Message Field -->
+        <div>
+          <label for="message" class="field-label">Message</label>
+          <textarea id="message" name="message" rows="4" class="field-textarea" placeholder="Anything else you'd like us to know"></textarea>
+        </div>
+
+        <div class="pt-4">
+          <button type="submit" class="w-full bg-gold text-obsidian font-semibold tracking-widest uppercase py-4 rounded-lg hover:bg-gold-bright transition-colors shadow-[0_0_20px_rgba(201,168,76,0.2)]">
             Submit Registration
           </button>
-        </form>
-      </div>
-
+        </div>
+      </form>
     </div>
-  </section>
 
+  </div>
 </main>
 
-<!-- ============ CONTACT / FOOTER ============ -->
-<footer id="contact" class="bg-maroon-dark text-cream pt-24 sm:pt-32 pb-10 relative overflow-hidden">
-
-  <svg class="absolute -top-10 -right-10 w-72 h-72 text-gold opacity-[0.06] pointer-events-none" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="0.6">
-    <path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z"/>
-    <path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(72 16 16)"/>
-    <path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(144 16 16)"/>
-    <path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(216 16 16)"/>
-    <path d="M16 4c2 4 2 8 0 12-2-4-2-8 0-12z" transform="rotate(288 16 16)"/>
-    <circle cx="16" cy="16" r="1.8"/>
-  </svg>
-
-  <div class="max-w-7xl mx-auto px-5 sm:px-8 relative">
-    <div class="reveal text-center max-w-2xl mx-auto mb-16">
-      <p class="text-gold text-xs sm:text-sm tracking-[0.3em] uppercase font-medium mb-4">Get in Touch</p>
-      <h2 class="font-display text-3xl sm:text-5xl text-cream leading-tight">Visit, Call, or Write to Us</h2>
-    </div>
-
-    <div class="reveal max-w-4xl mx-auto">
-
-      <div class="grid sm:grid-cols-3 gap-10 mb-14 text-center">
-
-        <div class="flex flex-col items-center">
-          <span class="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center mb-4 text-gold">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path d="M12 21s-7-7.5-7-12a7 7 0 1 1 14 0c0 4.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
-          </span>
-          <p class="text-xs tracking-[0.2em] uppercase text-cream/50 mb-2">Academy Address</p>
-          <p class="text-cream/90 leading-relaxed">Block 4, Street 25,<br>Mangaf, Al-Ahmadi Governorate, Kuwait</p>
-          <a href="https://maps.app.goo.gl/6eXpiknGN6Hf24E87" target="_blank" rel="noopener noreferrer" class="inline-block mt-3 text-sm text-gold hover:text-gold-light transition-colors">Get Directions &rarr;</a>
-        </div>
-
-        <div class="flex flex-col items-center">
-          <span class="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center mb-4 text-gold">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path d="M4 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L14 13l5 2v4a2 2 0 0 1-2 2C9.5 21 3 14.5 3 6a2 2 0 0 1 2-2z"/></svg>
-          </span>
-          <p class="text-xs tracking-[0.2em] uppercase text-cream/50 mb-2">Call Us</p>
-          <a href="tel:+96567648787" class="text-cream/90 hover:text-gold transition-colors">+965 6764 8787</a>
-        </div>
-
-        <div class="flex flex-col items-center">
-          <span class="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center mb-4 text-gold">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-          </span>
-          <p class="text-xs tracking-[0.2em] uppercase text-cream/50 mb-2">Email Us</p>
-          <a href="mailto:psdkuwait@gmail.com" class="text-cream/90 hover:text-gold transition-colors break-all">psdkuwait@gmail.com</a>
-        </div>
-
-      </div>
-
-      <!-- Social -->
-      <div class="flex items-center justify-center gap-3 mb-14">
-        <a href="https://www.instagram.com/prathibhaschoolofdance/" target="_blank" rel="noopener noreferrer" aria-label="Prathibha School of Dance on Instagram" class="w-11 h-11 rounded-full border border-gold/40 flex items-center justify-center text-gold hover:bg-gold hover:text-maroon-dark transition-colors">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.9" fill="currentColor" stroke="none"/></svg>
-        </a>
-        <a href="https://www.facebook.com/prathibhaschoolofdance/" target="_blank" rel="noopener noreferrer" aria-label="Prathibha School of Dance on Facebook" class="w-11 h-11 rounded-full border border-gold/40 flex items-center justify-center text-gold hover:bg-gold hover:text-maroon-dark transition-colors">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path d="M14 9.2h2.3V6.3H14c-1.7 0-3 1.4-3 3.1v1.8H9v3h2v6.3h3v-6.3h2.2l.5-3H14V9.2z"/></svg>
-        </a>
-        <a href="https://www.youtube.com/@psdkuwait" target="_blank" rel="noopener noreferrer" aria-label="Prathibha School of Dance on YouTube" class="w-11 h-11 rounded-full border border-gold/40 flex items-center justify-center text-gold hover:bg-gold hover:text-maroon-dark transition-colors">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M11 9.7l4 2.3-4 2.3z" fill="currentColor" stroke="none"/></svg>
-        </a>
-      </div>
-
-      <!-- Map -->
-      <div>
-        <p class="text-xs tracking-[0.2em] uppercase text-cream/50 mb-3 text-center">Find Us</p>
-        <div class="aspect-video rounded-md overflow-hidden border border-gold/25">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13944.394793521276!2d48.116049428047766!3d29.102767386128953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf063c7b169555%3A0x3574f3cb6952b806!2sPrathibha%20School%20Of%20Dance!5e0!3m2!1sen!2skw!4v1781989108140!5m2!1sen!2skw"
-            class="w-full h-full border-0"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Map showing the approximate location of Prathibha School of Dance, Kuwait">
-          </iframe>
-        </div>
-        <p class="text-center mt-3">
-          <a href="https://maps.app.goo.gl/6eXpiknGN6Hf24E87" target="_blank" rel="noopener noreferrer" class="text-sm text-gold hover:text-gold-light transition-colors">Open in Google Maps &rarr;</a>
-        </p>
-      </div>
-
-    </div>
-
-    <!-- Bottom bar -->
-    <div class="mt-20 pt-7 border-t border-cream/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-cream/45">
-      <p>&copy; <span id="year"></span> Prathibha School of Dance, Kuwait. All rights reserved.</p>
-      <p class="font-accent italic text-cream/40">Crafted with reverence for tradition.</p>
-    </div>
-  </div>
-</footer>
-
+<!-- MOBILE MENU JAVASCRIPT -->
 <script>
-  // Mobile menu
-  var menuBtn = document.getElementById('menu-btn');
-  var closeBtn = document.getElementById('menu-close-btn');
-  var mobileMenu = document.getElementById('mobile-menu');
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('menu-btn');
+    const closeBtn = document.getElementById('menu-close-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
 
-  function openMenu() {
-    mobileMenu.classList.remove('hidden');
-    menuBtn.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeMenu() {
-    mobileMenu.classList.add('hidden');
-    menuBtn.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
-  }
-  menuBtn.addEventListener('click', openMenu);
-  closeBtn.addEventListener('click', closeMenu);
-  mobileMenu.querySelectorAll('a').forEach(function (a) {
-    a.addEventListener('click', closeMenu);
-  });
-
-  // Nav shadow on scroll
-  var nav = document.getElementById('site-nav');
-  function onScroll() {
-    if (window.scrollY > 24) {
-      nav.classList.add('shadow-md');
-      nav.classList.add('bg-cream/95');
-      nav.classList.remove('bg-cream/80');
-    } else {
-      nav.classList.remove('shadow-md');
-      nav.classList.remove('bg-cream/95');
-      nav.classList.add('bg-cream/80');
-    }
-  }
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-
-  // Scroll reveal
-  var reveals = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
-          io.unobserve(entry.target);
-        }
+    if (menuBtn && closeBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.remove('hidden');
+        menuBtn.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden'; 
       });
-    }, { threshold: 0.12 });
-    reveals.forEach(function (el) { io.observe(el); });
-  } else {
-    reveals.forEach(function (el) { el.classList.add('in-view'); });
-  }
+      
+      closeBtn.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
 
-  // Footer year
-  document.getElementById('year').textContent = new Date().getFullYear();
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          menuBtn.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        });
+      });
+    }
+  });
 </script>
 
 </body>
